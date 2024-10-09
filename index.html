@@ -4,74 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Happy Environment - Plant Store</title>
+    <title>Happy Environment - Your Plant Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Happy Environment Logo">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Happy Environment Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#shop" class="cta-button">Shop Now</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section id="home">
-        <div class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
             <h1>Welcome to Happy Environment</h1>
-            <p>Your source for healthy, beautiful plants.</p>
+            <p>Creating greener homes, one plant at a time.</p>
+            <a href="#shop" class="cta-button">Explore Our Plants</a>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>At Happy Environment, we believe in creating a green and beautiful space for every home. 
-        We’ve been in the plant business since 2020, helping people all over the world brighten their spaces with nature.</p>
-    </section>
-
-    <section id="shop">
-        <h2>Our Plants</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="plant1.jpg" alt="Plant 1">
-                <h3>Succulent</h3>
-                <p>$10.00</p>
-            </div>
-            <div class="product">
-                <img src="plant2.jpg" alt="Plant 2">
-                <h3>Fern</h3>
-                <p>$15.00</p>
-            </div>
-            <div class="product">
-                <img src="plant3.jpg" alt="Plant 3">
-                <h3>Cactus</h3>
-                <p>$12.00</p>
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>At Happy Environment, we believe in the power of nature to create happier, healthier spaces. We offer a wide range of plants that are perfect for any home or office environment, designed to bring beauty, health benefits, and joy into your everyday life.</p>
+                <img src="about-image.jpg" alt="Beautiful indoor plants">
             </div>
         </div>
     </section>
 
+    <!-- Shop Section -->
+    <section id="shop" class="products">
+        <div class="container">
+            <h2>Our Plants</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="plant1.jpg" alt="Succulent">
+                    <h3>Succulent</h3>
+                    <p class="description">A low-maintenance, beautiful plant perfect for brightening small spaces.</p>
+                    <p class="price">$10.00</p>
+                </div>
+                <div class="product">
+                    <img src="plant2.jpg" alt="Fern">
+                    <h3>Fern</h3>
+                    <p class="description">A lush, green plant that adds a touch of nature to any room.</p>
+                    <p class="price">$15.00</p>
+                </div>
+                <div class="product">
+                    <img src="plant3.jpg" alt="Cactus">
+                    <h3>Cactus</h3>
+                    <p class="description">A hardy plant that requires little water, perfect for sunny spots.</p>
+                    <p class="price">$12.00</p>
+                </div>
+            </div>
+            <a href="#" class="cta-button">See More Plants</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Happy Environment helped me turn my office into a green paradise. Their plants are top quality!"</p>
+                    <h4>- Alex D.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I love my new cactus! It brightens up my kitchen and requires almost no maintenance."</p>
+                    <h4>- Maria S.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"I’ve never had much of a green thumb, but their succulents are so easy to care for!"</p>
+                    <h4>- John K.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have questions about our plants or services? Feel free to reach out!</p>
-        <div class="contact-details">
-            <p><strong>Email:</strong> <a href="mailto:support@happyenvironment.fake">support@happyenvironment.fake</a></p>
-            <p><strong>Phone:</strong> +1 (800) 555-PLNT</p>
-            <p><strong>Address:</strong> 123 Green Thumb Blvd, Plant City, PC 10101</p>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>We’d love to hear from you! Reach out to us with any questions or inquiries.</p>
+            <div class="contact-details">
+                <p><strong>Email:</strong> <a href="mailto:support@happyenvironment.fake">support@happyenvironment.fake</a></p>
+                <p><strong>Phone:</strong> +1 (800) 555-PLNT</p>
+                <p><strong>Address:</strong> 123 Green Thumb Blvd, Plant City, PC 10101</p>
+            </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Happy Environment. All rights reserved.</p>
-        <p>Follow us on social media: 
-            <a href="https://facebook.com/happyenvironment" target="_blank">Facebook</a> | 
-            <a href="https://instagram.com/happyenvironment" target="_blank">Instagram</a>
-        </p>
+        <div class="container">
+            <p>&copy; 2024 Happy Environment. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://facebook.com/happyenvironment" target="_blank">Facebook</a> |
+                <a href="https://instagram.com/happyenvironment" target="_blank">Instagram</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
