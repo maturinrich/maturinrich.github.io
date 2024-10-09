@@ -1,116 +1,191 @@
+(Aucun objet)
+RICHARD Maturin
+​
+RICHARD Maturin
+​
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #333;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 header {
+    background-color: #28a745;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2b7a3b;
-    padding: 10px 20px;
-    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo img {
-    height: 60px;
+header .logo img {
+    height: 50px;
 }
 
-nav ul {
+header nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover {
+    color: #f4f4f9;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #28a745;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+    color: #fff;
 }
 
 .hero {
-    text-align: center;
-    padding: 100px 20px;
     background: url('hero-background.jpg') no-repeat center center/cover;
     color: white;
+    padding: 150px 0;
+    text-align: center;
 }
 
 .hero h1 {
-    font-size: 48px;
-}
-
-.hero p {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 32px;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-.product-grid {
+.hero p {
+    font-size: 1.5rem;
+}
+
+.about-content {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-content img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .product {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .product img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .product h3 {
-    margin: 15px 0;
-    font-size: 18px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.product p {
-    font-size: 16px;
-    color: #2b7a3b;
+.product .price {
+    font-size: 1.2rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+#testimonials {
+    background-color: #f4f4f9;
+    padding: 80px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    color: #28a745;
 }
 
 footer {
-    background-color: #2b7a3b;
+    background-color: #28a745;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .socials a:hover {
+    text-decoration: underline;
+}
+
 .contact-details {
-    margin-top: 20px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .contact-details p {
-    font-size: 18px;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
