@@ -64,6 +64,7 @@ header nav ul li a:hover {
    color: white;
    padding: 150px 0;
    text-align: center;
+   position: relative;
 }
 .hero .green-text {
    color: #28a745;
@@ -71,9 +72,13 @@ header nav ul li a:hover {
 .hero h1 {
    font-size: 3.5rem;
    margin-bottom: 20px;
+   color: #fff;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
 }
 .hero p {
    font-size: 1.5rem;
+   color: #f0f0f0;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); /* Improved contrast */
 }
 .about-content {
    display: flex;
@@ -112,6 +117,7 @@ header nav ul li a:hover {
 .product h3 {
    font-size: 1.5rem;
    margin-bottom: 10px;
+   color: #333; /* Improved readability */
 }
 .product .price {
    font-size: 1.2rem;
