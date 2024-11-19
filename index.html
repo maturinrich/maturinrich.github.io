@@ -1,129 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Happy Environment - Your Plant Store</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Happy Environment - Votre Havre de Plantes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
+    <!-- Barre de navigation -->
+    <header class="navbar">
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Happy Environment Logo">
+                <img src="logo.png" alt="Logo Happy Environment">
             </div>
             <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#shop">Shop</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#shop">Boutique</a></li>
+                    <li><a href="#testimonials">Témoignages</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#shop" class="cta-button">Shop Now</a>
         </div>
     </header>
 
-    <!-- Back-to-Top Button -->
-    <a href="#home" class="back-to-top">&#8679;</a>
-
-    <!-- Hero Section -->
+    <!-- Section Hero -->
     <section id="home" class="hero">
-        <div class="container">
-            <h1 class="highlight">Welcome to <span class="green-text">Happy Environment</span></h1>
-            <p>Creating greener homes, one plant at a time.</p>
-            <a href="#shop" class="cta-button">Explore Our Plants</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <div class="about-content">
-                <p>At Happy Environment, we believe in the power of nature to create happier, healthier spaces. We offer a wide range of plants that are perfect for any home or office environment, designed to bring beauty, health benefits, and joy into your everyday life.</p>
-                <img src="about-image.jpg" alt="Beautiful indoor plants">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Un Monde de Verdure</h1>
+                <p>Apportez la sérénité et la beauté de la nature chez vous.</p>
+                <a href="#shop" class="btn-primary">Explorer nos plantes</a>
             </div>
         </div>
     </section>
 
-    <!-- Shop Section -->
-    <section id="shop" class="products">
+    <!-- Section À propos -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2>Our Plants</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="plant1.jpg" alt="Succulent">
-                    <h3>Succulent</h3>
-                    <p class="description">A low-maintenance, beautiful plant perfect for brightening small spaces.</p>
-                    <p class="price">$10.00</p>
+            <h2>À propos de nous</h2>
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <p>Chez Happy Environment, nous sommes passionnés par l'intégration de la nature dans la vie quotidienne. Nos plantes soigneusement sélectionnées transforment vos espaces en véritables oasis de paix.</p>
                 </div>
-                <div class="product">
-                    <img src="plant2.jpg" alt="Fern">
-                    <h3>Fern</h3>
-                    <p class="description">A lush, green plant that adds a touch of nature to any room.</p>
-                    <p class="price">$15.00</p>
+                <div class="about-image">
+                    <img src="about-image.jpg" alt="Plantes d'intérieur apaisantes">
                 </div>
-                <div class="product">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Boutique -->
+    <section id="shop" class="shop-section">
+        <div class="container">
+            <h2>Notre Collection</h2>
+            <div class="shop-grid">
+                <div class="shop-item">
+                    <img src="plant1.jpg" alt="Succulente">
+                    <h3>Succulente</h3>
+                    <p class="price">10,00 €</p>
+                </div>
+                <div class="shop-item">
+                    <img src="plant2.jpg" alt="Fougère">
+                    <h3>Fougère</h3>
+                    <p class="price">15,00 €</p>
+                </div>
+                <div class="shop-item">
                     <img src="plant3.jpg" alt="Cactus">
                     <h3>Cactus</h3>
-                    <p class="description">A hardy plant that requires little water, perfect for sunny spots.</p>
-                    <p class="price">$12.00</p>
+                    <p class="price">12,00 €</p>
                 </div>
             </div>
-            <a href="#" class="cta-button">See More Plants</a>
+            <div class="btn-container">
+                <a href="#" class="btn-secondary">Voir plus</a>
+            </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
+    <!-- Section Témoignages -->
+    <section id="testimonials" class="testimonials-section">
         <div class="container">
-            <h2>What Our Customers Say</h2>
-            <div class="testimonials-grid">
+            <h2>Ce que disent nos clients</h2>
+            <div class="testimonials-wrapper">
                 <div class="testimonial">
-                    <p>"Happy Environment helped me turn my office into a green paradise. Their plants are top quality!"</p>
+                    <p>"Happy Environment a complètement transformé ma maison avec des plantes magnifiques et faciles à entretenir."</p>
                     <h4>- Alex D.</h4>
                 </div>
                 <div class="testimonial">
-                    <p>"I love my new cactus! It brightens up my kitchen and requires almost no maintenance."</p>
+                    <p>"Je ne peux plus imaginer mon bureau sans mes nouvelles plantes. Un excellent service et des plantes saines !"</p>
                     <h4>- Maria S.</h4>
                 </div>
                 <div class="testimonial">
-                    <p>"I’ve never had much of a green thumb, but their succulents are so easy to care for!"</p>
+                    <p>"Le choix est incroyable, et mes nouvelles succulentes sont parfaites pour mes petites étagères ensoleillées."</p>
                     <h4>- John K.</h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Contact Us</h2>
-            <p>We’d love to hear from you! Reach out to us with any questions or inquiries.</p>
-            <div class="contact-details">
-                <p><strong>Email:</strong> <a href="mailto:support@happyenvironment.fake">support@happyenvironment.fake</a></p>
-                <p><strong>Phone:</strong> +1 (800) 555-PLNT</p>
-                <p><strong>Address:</strong> 123 Green Thumb Blvd, Plant City, PC 10101</p>
-            </div>
+            <h2>Contactez-nous</h2>
+            <p>Besoin d'aide ou de conseils ? Nous sommes là pour vous.</p>
+            <ul class="contact-details">
+                <li>Email : <a href="mailto:support@happyenvironment.fake">support@happyenvironment.fake</a></li>
+                <li>Téléphone : +33 1 23 45 67 89</li>
+                <li>Adresse : 123 Boulevard des Plantes, 75000 Paris, France</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Pied de page -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Happy Environment. All rights reserved.</p>
-            <div class="socials">
-                <a href="https://facebook.com/happyenvironment" target="_blank">Facebook</a> |
+            <p>&copy; 2024 Happy Environment. Tous droits réservés.</p>
+            <div class="social-media">
+                <a href="https://facebook.com/happyenvironment" target="_blank">Facebook</a>
                 <a href="https://instagram.com/happyenvironment" target="_blank">Instagram</a>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
