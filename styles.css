@@ -258,6 +258,45 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+/* Quiz Section */
+.quiz-section {
+    padding: 60px 20px; /* Adjusted padding for a more spacious layout */
+    background: linear-gradient(135deg, #e3fdf5, #ffe6fa); /* Soft gradient background */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners for a smoother look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.quiz-section h2 {
+    font-size: 2.5rem; /* Larger font for the heading */
+    color: #333;
+    font-weight: 700; /* Bold heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.quiz-section p {
+    font-size: 1.2rem; /* Slightly larger font for better readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 25px; /* Space below the paragraph */
+}
+
+.quiz-section .btn-primary {
+    background-color: #6bbf59;
+    color: #ffffff;
+    padding: 12px 30px; /* Larger button with more padding */
+    border-radius: 25px; /* Rounded corners for a modern look */
+    font-size: 1rem; /* Increased font size */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+}
+
+.quiz-section .btn-primary:hover {
+    background-color: #5aa447; /* Darker green on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
 
 /* Logo */
 /* Logo Styles with Dynamic Animation */
