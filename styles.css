@@ -32,12 +32,37 @@ body {
     z-index: 1000;
 }
 
-.logo {
-    flex-shrink: 0; /* Prevents the logo from shrinking */
+/* Logo Basic Styles */
+.logo img {
+    width: 100px; /* Adjust this size to fit your logo */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+    animation: logoAnimation 3s ease-in-out infinite; /* Continuous animation */
+}
+/* Logo Basic Styles */
+.logo img {
+    width: 100px; /* Adjust this size to fit your logo */
+    transition: transform 0.3s ease; /* Smooth transition for hover */
+    animation: logoAnimation 3s ease-in-out infinite; /* Continuous animation */
 }
 
-.logo img {
-    height: 50px;
+/* Keyframes for Logo Animation */
+@keyframes logoAnimation {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+}
+
+/* Hover Effect for Logo */
+.logo img:hover {
+    transform: scale(1.2); /* Enlarges the logo on hover */
 }
 
 .nav-links {
@@ -323,44 +348,4 @@ body {
     background-color: #5aa447; /* Darker green on hover */
     transform: translateY(-2px); /* Slight lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-}
-/* Logo Animation */
-.logo img {
-    width: 100px; /* Adjust size as needed */
-    transition: transform 0.5s ease-in-out;
-    animation: logoAnimation 2s ease-in-out infinite alternate;
-}
-
-@keyframes logoAnimation {
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-}
-.logo img {
-    animation: bounce 2s infinite;
-}
-@keyframes fadeInSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.logo img {
-    animation: fadeInSlide 1.5s ease-in-out;
-}
-
-/* Hover Effect for Logo */
-.logo img:hover {
-    transform: scale(1.2) rotate(0deg); /* Enlarges the logo slightly on hover */
 }
