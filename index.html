@@ -9,47 +9,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Happy Environment Logo">
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for plants..." aria-label="Search">
-                <button>Search</button>
-            </div>
-            <div class="auth-links">
-                <a href="#sign-up" class="btn-signup">Sign Up</a>
-                <a href="#sign-in" class="btn-signin">Sign In</a>
-            </div>
+   <!-- Navigation Bar -->
+<header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Happy Environment Logo">
         </div>
-    </header>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Happy Environment</h1>
-            <p>Your ultimate destination for lush, healthy plants.</p>
-            <a href="#quiz" class="btn-primary">Find Your Perfect Plant</a>
-            <a href="#shop" class="btn-secondary">Shop Now</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-links">
+            <a href="#sign-up" class="btn-signup">Sign Up</a>
+            <a href="#sign-in" class="btn-signin">Sign In</a>
         </div>
-    </section>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for plants..." aria-label="Search">
+            <button>Search</button>
+        </div>
+    </div>
+</header>
 
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Us</h2>
-                    <p>At Happy Environment, we are dedicated to enhancing your living and work spaces with nature's beauty. Our wide range of plants is carefully selected to bring peace, vibrancy, and fresh air into your environment.</p>
-                </div>
-                <div class="about-image">
-                    <img src="about-image.png" alt="Beautiful indoor plants">
-                </div>
+
+    <!-- Hero  -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Happy Environment</h1>
+        <p>Your ultimate destination for lush, healthy plants.</p>
+        <a href="#quiz" class="btn-primary">Find Your Perfect Plant</a>
+        <a href="#shop" class="btn-secondary">Shop Now</a>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>At Happy Environment, we are dedicated to enhancing your living and work spaces with nature's beauty. Our wide range of plants is carefully selected to bring peace, vibrancy, and fresh air into your environment.</p>
+            </div>
+            <div class="about-image">
+                <img src="about-image.png" alt="Beautiful indoor plants">
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
 
     <!-- Plant Quiz  -->
     <section id="quiz" class="quiz-section">
@@ -133,7 +143,8 @@
             </ul>
         </div>
     </section>
- <!-- Footer with Visual Feedback -->
+
+    <!-- Footer with Visual Feedback -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Happy Environment. All Rights Reserved.</p>
