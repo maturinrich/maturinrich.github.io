@@ -814,7 +814,7 @@ body {
 .scroll-content {
     display: flex;
     white-space: nowrap;
-    animation: scrollBanner 200s linear infinite; /* Continuous scrolling effect */
+    animation: scrollBanner 40s linear infinite; /* Continuous scrolling effect */
 }
 
 .scroll-content p {
