@@ -20,39 +20,10 @@ body {
     margin: 0 auto;
 }
 
-/* Navbar Styling */
-.navbar {
-    background-color: #ffffff;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.logo img {
-    height: 50px;
-}
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-.nav-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-.nav-links a:hover {
-    color: #6bbf59;
-}
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
-    padding: 20px 40px; /* Increased horizontal padding for more spacing */
+    padding: 20px 60px; /* Increased padding to add more space around the elements */
     border-bottom: 1px solid #d4d7d2;
     display: flex;
     justify-content: space-between;
@@ -69,13 +40,14 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Increased gap between navigation items for more spacing */
+    gap: 50px; /* Significantly increased gap for more spacing between links */
 }
 
 .nav-links a {
     color: #2d2d2d;
     text-decoration: none;
     font-weight: 500;
+    font-size: 16px; /* Adjust font size if needed */
     transition: color 0.3s;
 }
 
@@ -86,19 +58,19 @@ body {
 /* Search Bar */
 .search-bar {
     display: flex;
-    gap: 10px;
-    margin-left: 40px; /* Added margin to separate the search bar from the navigation links */
+    gap: 15px; /* Increased gap between the search input and button */
+    margin-left: 60px; /* Added a larger margin to separate the search bar from the nav links */
 }
 
 .search-bar input {
-    padding: 8px;
+    padding: 10px; /* Adjusted padding for a larger input field */
     border: 1px solid #c7d3c2;
     border-radius: 5px;
     outline: none;
 }
 
 .search-bar button {
-    padding: 8px 12px;
+    padding: 10px 20px; /* Adjusted padding for a more prominent button */
     border: none;
     background-color: #6bbf59;
     color: #fff;
@@ -110,6 +82,7 @@ body {
 .search-bar button:hover {
     background-color: #5aa447;
 }
+
 
 
 /* Hero Section */
