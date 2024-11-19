@@ -795,34 +795,40 @@ body {
     border: 2px solid #ffffff; /* Adds a border on hover */
 }
 
-/* Optional: Decorative Elements */
-.black-friday-banner::before,
-.black-friday-banner::after {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background-color: #ffffff;
-    opacity: 0.1;
-    border-radius: 50%;
-    animation: float 6s infinite ease-in-out;
+/* Fixed Scrolling Black Friday Banner */
+.black-friday-scroll-banner {
+    position: fixed;
+    top: 0; /* Stays at the top of the page */
+    left: 0;
+    width: 100%;
+    background-color: #ff4b5c; /* Bright red color for attention */
+    color: #ffffff;
+    padding: 10px 0;
+    z-index: 10000; /* Ensures it stays above all content */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.black-friday-banner::after {
-    top: auto;
-    bottom: -50px;
-    right: -50px;
-    left: auto;
+.scroll-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollBanner 15s linear infinite; /* Continuous scrolling effect */
 }
 
-/* Animation for Floating Decorative Elements */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
+.scroll-content p {
+    font-size: 1rem; /* Smaller text size */
+    font-weight: bold;
+    margin: 0 30px; /* Spacing between repeating messages */
+}
+
+/* Animation for Scrolling Text */
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(100%);
     }
-    50% {
-        transform: translateY(20px);
+    100% {
+        transform: translateX(-100%);
     }
 }
