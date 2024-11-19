@@ -390,3 +390,38 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+/* Auth Links (Sign Up and Sign In) */
+.auth-links {
+    display: flex;
+    gap: 15px; /* Space between the Sign Up and Sign In links */
+    margin-left: auto; /* Pushes the auth links to the far right */
+}
+
+.auth-links a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.btn-signup {
+    background-color: #6bbf59; /* Plant green color for Sign Up */
+    color: #ffffff;
+}
+
+.btn-signup:hover {
+    background-color: #5aa447;
+}
+
+.btn-signin {
+    background-color: transparent;
+    color: #6bbf59;
+    border: 2px solid #6bbf59; /* Border for the Sign In button */
+}
+
+.btn-signin:hover {
+    background-color: #6bbf59;
+    color: #ffffff;
+}
