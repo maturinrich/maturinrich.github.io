@@ -18,9 +18,6 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 /* Navigation Bar */
@@ -28,30 +25,20 @@ body {
     background-color: #ffffff;
     padding: 20px 60px;
     border-bottom: 1px solid #d4d7d2;
+    display: flex;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-/* Logo */
-.logo img {
-    width: 100px;
-}
-
 /* Navigation Links */
-.nav-links-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 .nav-links {
     list-style: none;
     display: flex;
     gap: 40px;
+    flex: 1;
 }
 
 .nav-links a {
@@ -65,17 +52,10 @@ body {
     color: #6bbf59;
 }
 
-/* Right Elements (Sign Up, Sign In, and Search Bar) */
-.right-elements {
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Space between auth links and search bar */
-}
-
-/* Auth Links */
+/* Auth Links (Sign Up and Sign In) */
 .auth-links {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Space between the Sign Up and Sign In links */
 }
 
 .auth-links a {
@@ -88,7 +68,7 @@ body {
 }
 
 .btn-signup {
-    background-color: #6bbf59;
+    background-color: #6bbf59; /* Plant green color for Sign Up */
     color: #ffffff;
 }
 
@@ -99,7 +79,7 @@ body {
 .btn-signin {
     background-color: transparent;
     color: #6bbf59;
-    border: 2px solid #6bbf59;
+    border: 2px solid #6bbf59; /* Border for the Sign In button */
 }
 
 .btn-signin:hover {
@@ -107,36 +87,9 @@ body {
     color: #ffffff;
 }
 
-/* Search Bar */
-.search-bar {
-    display: flex;
-    gap: 10px;
-}
-
-.search-bar input {
-    padding: 8px;
-    border: 1px solid #c7d3c2;
-    border-radius: 5px;
-    outline: none;
-    width: 250px; /* Adjust the width to fit better in the layout */
-}
-
-.search-bar button {
-    padding: 8px 12px;
-    border: none;
-    background-color: #6bbf59;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #5aa447;
-}
-
 /* Logo Styles with Dynamic Animation */
 .logo img {
+    width: 100px; /* Adjust to fit your logo size */
     animation: spinPulse 5s infinite ease-in-out; /* Continuous dynamic animation */
     transition: transform 0.5s ease;
 }
@@ -161,12 +114,12 @@ body {
 
 /* Hover Effect for Logo */
 .logo img:hover {
-    transform: scale(1.3) rotate(15deg);
+    transform: scale(1.3) rotate(15deg); /* Enlarges and rotates the logo on hover */
 }
 
 /* About Us Section */
 .about-section {
-    background: linear-gradient(135deg, #e3fdf5, #ffe6fa);
+    background: linear-gradient(135deg, #e3fdf5, #ffe6fa); /* Soft gradient background */
     padding: 60px 0;
     color: #333;
     text-align: center;
@@ -176,20 +129,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+    gap: 40px; /* Space between text and image */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .about-text {
     flex: 1;
     max-width: 500px;
     margin: 0 auto;
-    text-align: left;
+    text-align: left; /* Align text to the left for better readability */
 }
 
 .about-text h2 {
     font-size: 2.5rem;
-    color: #6bbf59;
+    color: #6bbf59; /* Plant green color for the heading */
     margin-bottom: 20px;
 }
 
@@ -208,13 +161,13 @@ body {
 .about-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .about-content {
-        flex-direction: column;
+        flex-direction: column; /* Stack items on smaller screens */
         text-align: center;
     }
     .about-text {
