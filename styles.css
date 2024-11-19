@@ -571,6 +571,15 @@ body {
     transition: transform 0.5s ease;
 }
 
+@keyframes spinTop {
+    from {
+        transform: rotate(0deg); /* Start position */
+    }
+    to {
+        transform: rotate(360deg); /* Full rotation */
+    }
+}
+
 @keyframes spinPulse {
     0% {
         transform: rotate(0) scale(1);
