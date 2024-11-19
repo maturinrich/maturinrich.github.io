@@ -235,30 +235,75 @@ body {
 
 /* Contact Section */
 .contact-section {
-    padding: 60px 0;
-    background-color: #f3f3f3;
+    padding: 60px 30px; /* More padding for a spacious layout */
+    background-color: #f9f9f9; /* Soft background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
 }
+
+.contact-section h2 {
+    font-size: 2.5rem; /* Larger heading */
+    font-weight: 700; /* Bold heading */
+    color: #333;
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px; /* Space below the introductory text */
+}
+
 .contact-details {
-    list-style: none;
+    list-style: none; /* Remove default list styling */
+    padding-left: 0;
     margin-top: 20px;
 }
+
 .contact-details li {
-    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px; /* Space between contact details */
+}
+
+.contact-details a {
+    color: #6bbf59; /* Plant green for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #5aa447; /* Darker green on hover */
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #333; /* Dark background for contrast */
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    border-top-left-radius: 15px; /* Rounded corners for a smooth transition */
+    border-top-right-radius: 15px;
 }
-.social-links a {
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem; /* Slightly smaller font for the footer text */
+    color: #ddd; /* Lighter text color for readability */
+}
+
+.footer .social-links a {
     color: #6bbf59;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px; /* Space between social links */
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+    color: #5aa447; /* Darker green on hover */
 }
 
 /* Buy Button */
