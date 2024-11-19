@@ -709,3 +709,74 @@ body {
 .search-bar button:hover {
     background-color: #5aa447;
 }
+/* Statistics Section */
+.statistics-section {
+    background-color: #f3f3f3;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.statistics-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: calc(25% - 20px);
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #6bbf59;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Bar Graph Styling */
+.bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    width: 100%;
+}
+
+.fill {
+    background-color: #6bbf59;
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    animation: fillBar 2s forwards; /* Animates the bar filling */
+}
+
+@keyframes fillBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Full bar */
+    }
+}
