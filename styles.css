@@ -191,15 +191,47 @@ body {
 
 /* Sustainability Section */
 .sustainability-section {
-    padding: 60px 0;
-    background-color: #ffffff;
+    padding: 60px 30px; /* Added more padding for a spacious layout */
+    background: linear-gradient(135deg, #e6f9e6, #f9f9f9); /* Soft green gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: left;
 }
-.sustainability-section ul {
-    margin-top: 20px;
-    list-style-type: disc;
-    padding-left: 20px;
+
+.sustainability-section h2 {
+    font-size: 2.5rem; /* Larger heading font size */
+    font-weight: 700; /* Bold heading */
+    color: #333;
+    margin-bottom: 15px; /* Space below the heading */
 }
+
+.sustainability-section p {
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.sustainability-section ul {
+    list-style-type: none; /* Removed default bullet points */
+    padding-left: 0;
+}
+
+.sustainability-section li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 10px;
+    padding-left: 30px; /* Added space to align icons */
+    position: relative;
+}
+
+.sustainability-section li::before {
+    content: '🌱'; /* Added a leaf icon for a more thematic bullet point */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem; /* Icon size */
+    color: #6bbf59; /* Icon color */
+}
+
 
 /* Contact Section */
 .contact-section {
