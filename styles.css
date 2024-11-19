@@ -795,16 +795,16 @@ body {
     border: 2px solid #ffffff; /* Adds a border on hover */
 }
 
-/* Fixed Scrolling Black Friday Banner */
+/* Bannière Black Friday fixée avec défilement continu */
 .black-friday-scroll-banner {
     position: fixed;
-    top: 0; /* Stays at the top of the page */
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #ff4b5c; /* Bright red color for attention */
+    background-color: #ff4b5c;
     color: #ffffff;
     padding: 10px 0;
-    z-index: 10000; /* Ensures it stays above all content */
+    z-index: 10000;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -814,21 +814,22 @@ body {
 .scroll-content {
     display: flex;
     white-space: nowrap;
-    animation: scrollBanner 40s linear infinite; /* Continuous scrolling effect */
+    animation: scrollBanner 40s linear infinite;
 }
 
 .scroll-content p {
-    font-size: 1rem; /* Smaller text size */
+    font-size: 1rem;
     font-weight: bold;
-    margin: 0 30px; /* Spacing between repeating messages */
+    margin: 0 50px;
+    display: inline-block;
 }
 
-/* Animation for Scrolling Text */
+/* Animation de défilement */
 @keyframes scrollBanner {
-    0% {
-        transform: translateX(100%);
+    from {
+        transform: translateX(0);
     }
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
