@@ -23,10 +23,10 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
-    padding: 20px 60px; /* Increased padding to add more space around the elements */
+    padding: 20px 40px; /* Adjusted padding to add space */
     border-bottom: 1px solid #d4d7d2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distributes space evenly between logo, nav links, and search bar */
     align-items: center;
     position: sticky;
     top: 0;
@@ -40,14 +40,16 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px; /* Significantly increased gap for more spacing between links */
+    gap: 30px; /* Adjusted gap between navigation links */
+    margin: 0 auto; /* Centering the navigation links */
+    flex-grow: 1; /* Allows the nav links to take up available space */
+    justify-content: center; /* Centers the nav links within the available space */
 }
 
 .nav-links a {
     color: #2d2d2d;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px; /* Adjust font size if needed */
     transition: color 0.3s;
 }
 
@@ -58,19 +60,19 @@ body {
 /* Search Bar */
 .search-bar {
     display: flex;
-    gap: 15px; /* Increased gap between the search input and button */
-    margin-left: 60px; /* Added a larger margin to separate the search bar from the nav links */
+    gap: 10px;
+    margin-left: auto; /* Pushes the search bar to the right */
 }
 
 .search-bar input {
-    padding: 10px; /* Adjusted padding for a larger input field */
+    padding: 8px;
     border: 1px solid #c7d3c2;
     border-radius: 5px;
     outline: none;
 }
 
 .search-bar button {
-    padding: 10px 20px; /* Adjusted padding for a more prominent button */
+    padding: 8px 12px;
     border: none;
     background-color: #6bbf59;
     color: #fff;
@@ -82,8 +84,6 @@ body {
 .search-bar button:hover {
     background-color: #5aa447;
 }
-
-
 
 /* Hero Section */
 .hero {
