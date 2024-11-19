@@ -31,6 +31,63 @@ body {
     top: 0;
     z-index: 1000;
 }
+/* About Us Section */
+.about-section {
+    background: linear-gradient(135deg, #e3fdf5, #ffe6fa); /* Soft gradient background */
+    padding: 60px 0;
+    color: #333;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Space between text and image */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #6bbf59; /* Plant green color for the heading */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack items on smaller screens */
+        text-align: center;
+    }
+    .about-text {
+        text-align: center;
+    }
+}
 
 /* Logo Styles with Impressive Animation */
 .logo img {
