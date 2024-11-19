@@ -1,58 +1,85 @@
-/* Réinitialisation des styles */
+/* Reset Styles */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Style de base */
+/* General Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #2d2d2d;
-    background-color: #fafafa;
-    overflow-x: hidden;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-/* Conteneur */
+/* Container */
 .container {
-    width: 85%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Barre de navigation */
+/* Navbar Styling */
 .navbar {
     background-color: #ffffff;
-    padding: 15px 0;
-    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 .logo img {
-    height: 40px;
+    height: 50px;
 }
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px;
-    justify-content: flex-end;
+    gap: 25px;
 }
 .nav-links a {
-    color: #2d2d2d;
+    color: #333;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 .nav-links a:hover {
-    color: #a8e063;
+    color: #6bbf59;
 }
 
-/* Section Hero */
+/* Search Bar */
+.search-bar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.search-bar input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+.search-bar button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #6bbf59;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.search-bar button:hover {
+    background-color: #5aa447;
+}
+
+/* Hero Section */
 .hero {
-    background: url('Les 12 plantes vertes.jpg') no-repeat center/cover;
-    height: 85vh;
+    background: url('hero-image.jpg') no-repeat center/cover;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,6 +87,144 @@ body {
     color: #ffffff;
     position: relative;
 }
-.hero-overlay {
+.hero-content {
     background: rgba(0, 0, 0, 0.5);
-    position: absolute;
+    padding: 40px;
+    border-radius: 10px;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.btn-primary {
+    background-color: #6bbf59;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #5aa447;
+}
+.btn-secondary {
+    background-color: #ffffff;
+    color: #6bbf59;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 2px solid #6bbf59;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+    background-color: #6bbf59;
+    color: #ffffff;
+}
+
+/* Quiz Section */
+.quiz-section {
+    padding: 60px 0;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.quiz-section p {
+    margin-bottom: 20px;
+}
+
+/* Shop Section */
+.shop-section {
+    padding: 60px 0;
+}
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.filters label {
+    margin-right: 10px;
+}
+.filters select {
+    padding: 5px;
+    border-radius: 5px;
+}
+.shop-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shop-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    transition: transform 0.3s;
+}
+.shop-item:hover {
+    transform: translateY(-10px);
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.icon-sun, .icon-water, .icon-shade {
+    font-size: 14px;
+    color: #6bbf59;
+}
+
+/* Community Section */
+.community-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Sustainability Section */
+.sustainability-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: left;
+}
+.sustainability-section ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+.contact-details {
+    list-style: none;
+    margin-top: 20px;
+}
+.contact-details li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.social-links a {
+    color: #6bbf59;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
