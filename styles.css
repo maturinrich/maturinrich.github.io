@@ -568,27 +568,17 @@ body {
 
 /* Logo with 3D Spinning Animation */
 .logo img {
-    width: 100px; /* Adjust the size of your logo */
-   animation: spinTop 3s cubic-bezier(0.25, 1, 0.5, 1) infinite; /* Spinning like a top */
-    transform-origin: center; /* Center of rotation */
-    animation: spin3D 3s infinite linear; /* Continuous 3D spinning animation */
+    width: 100px; 
+    transform-origin: center; 
+    animation: spin3D 3s infinite linear; 
 }
 
 @keyframes spin3D {
     0% {
-        transform: rotate3d(1, 1, 0, 0deg); /* Starting position */
+        transform: rotate3d(1, 1, 0, 0deg); 
     }
     100% {
-        transform: rotate3d(1, 1, 0, 360deg); /* Full 3D rotation */
-    }
-}
-
-@keyframes spinTop {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg); /* Full rotation */
+        transform: rotate3d(1, 1, 0, 360deg); 
     }
 }
 
