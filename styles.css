@@ -429,11 +429,28 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px 40px; /* Reduced padding to fit more elements */
+    border-bottom: 1px solid #d4d7d2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 /* Logo */
-/* Logo Styles with Dynamic Animation */
+.logo {
+    flex: 0 0 auto; /* Ensures the logo does not stretch */
+    margin-right: 20px; /* Space between the logo and navigation links */
+}
+
 .logo img {
-    width: 100px; /* Adjust to fit your logo size */
-    animation: spinPulse 5s infinite ease-in-out; /* Continuous dynamic animation */
+    width: 120px; /* Adjusted width for better visibility */
+    animation: spinPulse 5s infinite ease-in-out;
     transition: transform 0.5s ease;
 }
 
@@ -455,110 +472,49 @@ body {
     }
 }
 
-/* Hover Effect for Logo */
-.logo img:hover {
-    transform: scale(1.3) rotate(15deg); /* Enlarges and rotates the logo on hover */
-}
-
-/* About Us Section */
-.about-section {
-    background: linear-gradient(135deg, #e3fdf5, #ffe6fa); /* Soft gradient background */
-    padding: 60px 0;
-    color: #333;
-    text-align: center;
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px; /* Space between text and image */
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-}
-
-.about-text {
-    flex: 1;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left; /* Align text to the left for better readability */
-}
-
-.about-text h2 {
-    font-size: 2.5rem;
-    color: #6bbf59; /* Plant green color for the heading */
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-.about-image {
-    flex: 1;
-    max-width: 600px;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Stack items on smaller screens */
-        text-align: center;
-    }
-    .about-text {
-        text-align: center;
-    }
-}
 /* Navigation Links */
 .nav-links-container {
-    flex: 1;
+    flex: 1; /* Takes up available space */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centered navigation links */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px; /* More space between links */
+    gap: 30px; /* Space between each link */
 }
 
 .nav-links a {
     color: #2d2d2d;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px; /* Slightly larger font for readability */
     transition: color 0.3s;
+    font-size: 1rem; /* Slightly larger font size */
 }
 
 .nav-links a:hover {
     color: #6bbf59;
 }
 
-/* Right Elements (Sign Up, Sign In, and Search Bar) */
+/* Right Elements */
 .right-elements {
     display: flex;
     align-items: center;
-    gap: 30px; /* More space between elements */
+    gap: 25px; /* Space between search bar and auth links */
+    flex: 0 0 auto; /* Prevents stretching */
 }
 
 /* Auth Links */
 .auth-links {
     display: flex;
-    gap: 20px; /* Increased gap between Sign Up and Sign In */
+    gap: 10px;
 }
 
 .auth-links a {
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px; /* More padding for larger buttons */
+    padding: 8px 16px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
@@ -587,35 +543,32 @@ body {
 /* Search Bar */
 .search-bar {
     display: flex;
-    gap: 10px; /* More space between input and button */
+    gap: 10px;
+    background-color: #f8f8f8; /* Light background for the search bar */
+    padding: 5px 10px;
+    border-radius: 25px; /* Rounded edges */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .search-bar input {
-    padding: 12px 20px; /* More padding for a more open feel */
-    border: 2px solid #c7d3c2;
-    border-radius: 30px; /* Rounded corners for a softer look */
+    border: none;
+    background-color: transparent;
     outline: none;
-    font-size: 14px;
-    width: 300px; /* Increased width for better usability */
-}
-
-.search-bar input:focus {
-    border-color: #6bbf59; /* Green border when focused */
+    font-size: 0.9rem;
+    color: #333;
+    flex: 1;
 }
 
 .search-bar button {
-    padding: 12px 25px; /* More padding for a larger button */
+    padding: 8px 16px;
     border: none;
     background-color: #6bbf59;
     color: #fff;
-    border-radius: 30px;
-    font-weight: bold;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
     background-color: #5aa447;
-    transform: translateY(-2px);
 }
