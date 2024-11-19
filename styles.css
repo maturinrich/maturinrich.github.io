@@ -78,7 +78,10 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('banniere.jpg') no-repeat center/cover;
+    background-image: url('banniere.jpg'); /* Correct image reference */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     height: 90vh;
     display: flex;
     align-items: center;
@@ -88,7 +91,7 @@ body {
     position: relative;
 }
 .hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to improve text readability */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
     padding: 40px;
     border-radius: 10px;
 }
@@ -100,6 +103,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+
 
 .btn-primary {
     background-color: #6bbf59;
