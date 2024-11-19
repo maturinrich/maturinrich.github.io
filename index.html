@@ -18,22 +18,22 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#indoor-plants">Indoor Plants</a></li>
+                    <li><a href="#outdoor-plants">Outdoor Plants</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
                     <li><a href="#community">Community</a></li>
                     <li><a href="#sustainability">Sustainability</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-        <!-- Search Bar with Autocomplete -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search for plants..." id="searchInput">
-            <button type="button">Search</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for plants..." aria-label="Search">
+                <button>Search</button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Interactive Features -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Welcome to Happy Environment</h1>
@@ -48,6 +48,7 @@
         <div class="container">
             <h2>About Us</h2>
             <p>At Happy Environment, we are dedicated to enhancing your living and work spaces with nature's beauty. Our wide range of plants is carefully selected to bring peace, vibrancy, and fresh air into your environment.</p>
+            <img src="about-image.png" alt="Indoor Plants">
         </div>
     </section>
 
@@ -65,60 +66,32 @@
         <div class="container">
             <h2>Our Plant Collection</h2>
             <p>Use our AR tool to visualize how each plant will look in your space!</p>
-            <!-- Advanced Filters -->
-            <div class="filters">
-                <label for="size">Size:</label>
-                <select id="size">
-                    <option value="all">All</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+            <div class="filter-bar">
+                <select>
+                    <option>Sort by: Popularity</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
                 </select>
-                <label for="light">Light:</label>
-                <select id="light">
-                    <option value="all">All</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <label for="water">Water:</label>
-                <select id="water">
-                    <option value="all">All</option>
-                    <option value="low">Low</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="frequent">Frequent</option>
-                </select>
+                <button>Filter Options</button>
             </div>
             <div class="shop-grid">
                 <div class="shop-item">
-                    <img src="succulent.jpg" alt="Succulent Plant">
+                    <img src="succulent-plant.png" alt="Succulent Plant">
                     <h3>Succulent</h3>
                     <p class="price">$10.00</p>
                     <a href="#" class="btn-ar">View in AR</a>
-                    <div class="icons">
-                        <span class="icon-sun">Full Sun</span>
-                        <span class="icon-water">Low Water</span>
-                    </div>
                 </div>
                 <div class="shop-item">
-                    <img src="fern.jpg" alt="Fern Plant">
+                    <img src="fern-plant.png" alt="Fern Plant">
                     <h3>Fern</h3>
                     <p class="price">$15.00</p>
                     <a href="#" class="btn-ar">View in AR</a>
-                    <div class="icons">
-                        <span class="icon-shade">Shade</span>
-                        <span class="icon-water">Frequent Water</span>
-                    </div>
                 </div>
                 <div class="shop-item">
-                    <img src="cactus.jpg" alt="Cactus Plant">
+                    <img src="cactus-plant.png" alt="Cactus Plant">
                     <h3>Cactus</h3>
                     <p class="price">$12.00</p>
                     <a href="#" class="btn-ar">View in AR</a>
-                    <div class="icons">
-                        <span class="icon-sun">Full Sun</span>
-                        <span class="icon-water">Low Water</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -159,7 +132,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with Visual Feedback -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Happy Environment. All Rights Reserved.</p>
@@ -169,5 +142,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- Visual Feedback Notifications -->
+    <div class="feedback-notification success">
+        <p>Item added to your cart successfully!</p>
+    </div>
+    <div class="feedback-notification error">
+        <p>Something went wrong. Please try again.</p>
+    </div>
 </body>
 </html>
