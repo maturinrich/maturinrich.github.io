@@ -49,32 +49,68 @@ body {
 .nav-links a:hover {
     color: #6bbf59;
 }
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 40px; /* Increased horizontal padding for more spacing */
+    border-bottom: 1px solid #d4d7d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Increased gap between navigation items for more spacing */
+}
+
+.nav-links a {
+    color: #2d2d2d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6bbf59; /* Plant green accent */
+}
 
 /* Search Bar */
 .search-bar {
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    gap: 10px;
+    margin-left: 40px; /* Added margin to separate the search bar from the navigation links */
 }
+
 .search-bar input {
-    width: 300px;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
+    border: 1px solid #c7d3c2;
+    border-radius: 5px;
     outline: none;
 }
+
 .search-bar button {
-    padding: 8px 15px;
+    padding: 8px 12px;
     border: none;
     background-color: #6bbf59;
     color: #fff;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .search-bar button:hover {
     background-color: #5aa447;
 }
+
 
 /* Hero Section */
 .hero {
