@@ -23,7 +23,7 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
-    padding: 20px 60px; /* Added horizontal padding for space */
+    padding: 20px 60px;
     border-bottom: 1px solid #d4d7d2;
     display: flex;
     align-items: center;
@@ -32,36 +32,36 @@ body {
     z-index: 1000;
 }
 
-/* Logo Basic Styles */
-/* Logo Basic Styles */
+/* Logo Styles with Impressive Animation */
 .logo img {
-    width: 100px; /* Adjust this to fit your logo size */
-    transition: transform 0.3s ease; /* Smooth transition for hover */
-    animation: logoBounce 2s infinite ease-in-out; /* Continuous animation */
+    width: 100px; /* Adjust to fit your logo size */
+    animation: logoSpin 4s infinite ease-in-out, pulse 2s infinite;
+    transition: transform 0.5s ease;
 }
 
-/* Keyframes for Logo Animation */
-@keyframes logoBounce {
-    0%, 100% {
-        transform: translateY(0); /* Initial and final position */
-    }
-    50% {
-        transform: translateY(-10px); /* Moves the logo up slightly */
-    }
+@keyframes logoSpin {
+    0% { transform: rotateY(0); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 /* Hover Effect for Logo */
 .logo img:hover {
-    transform: scale(1.1); /* Scales the logo on hover */
+    transform: scale(1.2) rotate(10deg); /* Enlarges and slightly rotates the logo on hover */
 }
 
-
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 40px; /* Space between navigation links */
-    flex: 1; /* Fills available space, pushing the search bar to the right */
-    justify-content: flex-start; /* Aligns the nav links to the left within their space */
+    gap: 40px;
+    flex: 1;
+    justify-content: flex-start;
 }
 
 .nav-links a {
@@ -72,15 +72,15 @@ body {
 }
 
 .nav-links a:hover {
-    color: #6bbf59; /* Plant green accent */
+    color: #6bbf59;
 }
 
 /* Search Bar */
 .search-bar {
     display: flex;
     gap: 10px;
-    margin-left: auto; /* Pushes the search bar all the way to the right */
-    flex-shrink: 0; /* Prevents the search bar from shrinking */
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
 .search-bar input {
@@ -104,13 +104,12 @@ body {
     background-color: #5aa447;
 }
 
-
 /* Hero Section */
 .hero {
-    background-image: url('banniere.jpg'); /* Correct image reference */
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-image: url('banniere.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -120,7 +119,7 @@ body {
     position: relative;
 }
 .hero-content {
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    background: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 10px;
 }
@@ -133,7 +132,7 @@ body {
     margin-bottom: 30px;
 }
 
-
+/* Buttons */
 .btn-primary {
     background-color: #6bbf59;
     color: #fff;
@@ -262,81 +261,75 @@ body {
     margin: 0 10px;
     font-weight: bold;
 }
+
 /* Buy Button */
 .btn-buy {
     display: inline-block;
-    padding: 10px 25px; /* Increased padding for a larger button */
-    margin-top: 15px; /* Added more margin to separate from the "View in AR" link */
-    background-color: #28a745; /* Vibrant green color */
+    padding: 10px 25px;
+    margin-top: 15px;
+    background-color: #28a745;
     color: #ffffff;
-    font-size: 14px; /* Slightly larger font */
+    font-size: 14px;
     border: none;
-    border-radius: 25px; /* Rounded edges for a modern look */
+    border-radius: 25px;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .btn-buy:hover {
-    background-color: #218838; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Adjust "View in AR" link */
 .btn-ar {
     display: inline-block;
-    margin-right: 10px; /* Added space between "View in AR" and "Buy" button */
+    margin-right: 10px;
     color: #6bbf59;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .btn-ar:hover {
-    color: #5aa447; /* Darker green on hover */
+    color: #5aa447;
 }
+
 /* Filter Bar */
 .filter-bar {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between the dropdown and the button */
-    margin-top: 20px; /* Added margin for separation from the text above */
+    gap: 15px;
+    margin-top: 20px;
 }
-
-/* Sort by Dropdown */
 .filter-bar select {
-    padding: 8px 12px; /* Added padding for a larger dropdown */
-    border: 1px solid #c7d3c2; /* Light border color */
-    border-radius: 5px; /* Rounded edges */
-    background-color: #f8f8f8; /* Subtle background color */
-    color: #333; /* Darker text color */
-    font-size: 14px; /* Slightly larger font */
+    padding: 8px 12px;
+    border: 1px solid #c7d3c2;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-size: 14px;
     cursor: pointer;
     transition: border-color 0.3s;
 }
-
 .filter-bar select:hover {
-    border-color: #6bbf59; /* Green border on hover */
+    border-color: #6bbf59;
 }
-
-/* Filter Options Button */
 .filter-bar button {
-    padding: 8px 16px; /* Added padding for a larger button */
-    background-color: #6bbf59; /* Green background color */
+    padding: 8px 16px;
+    background-color: #6bbf59;
     color: #ffffff;
     border: none;
-    border-radius: 5px; /* Rounded edges */
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .filter-bar button:hover {
-    background-color: #5aa447; /* Darker green on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    background-color: #5aa447;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
