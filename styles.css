@@ -26,7 +26,6 @@ body {
     padding: 20px 60px; /* Added horizontal padding for space */
     border-bottom: 1px solid #d4d7d2;
     display: flex;
-    justify-content: space-between; /* Spaces out logo, nav links, and search bar */
     align-items: center;
     position: sticky;
     top: 0;
@@ -45,8 +44,8 @@ body {
     list-style: none;
     display: flex;
     gap: 40px; /* Space between navigation links */
-    flex: 1; /* Allows the nav links to take up the available space */
-    justify-content: center; /* Centers the nav links within their space */
+    flex: 1; /* Fills available space, pushing the search bar to the right */
+    justify-content: flex-start; /* Aligns the nav links to the left within their space */
 }
 
 .nav-links a {
@@ -64,6 +63,7 @@ body {
 .search-bar {
     display: flex;
     gap: 10px;
+    margin-left: auto; /* Pushes the search bar all the way to the right */
     flex-shrink: 0; /* Prevents the search bar from shrinking */
 }
 
