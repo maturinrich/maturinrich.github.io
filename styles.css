@@ -397,3 +397,40 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 5px;
+    align-items: center; /* Center the items vertically */
+}
+
+.search-bar input {
+    padding: 10px 15px; /* Add more padding for a better look */
+    border: 2px solid #c7d3c2; /* Slightly thicker border */
+    border-radius: 25px; /* Rounded corners */
+    outline: none;
+    font-size: 14px; /* Increase font size */
+    transition: border-color 0.3s;
+    width: 250px; /* Adjust width as needed */
+}
+
+.search-bar input:focus {
+    border-color: #6bbf59; /* Green border when focused */
+}
+
+.search-bar button {
+    padding: 10px 20px; /* Add more padding for a larger button */
+    border: none;
+    background-color: #6bbf59; /* Plant green background */
+    color: #ffffff; /* White text */
+    border-radius: 25px; /* Rounded corners */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.search-bar button:hover {
+    background-color: #5aa447; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
