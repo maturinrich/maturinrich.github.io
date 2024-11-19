@@ -249,17 +249,36 @@ body {
 /* Buy Button */
 .btn-buy {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #6bbf59; /* Plant green color */
+    padding: 10px 25px; /* Increased padding for a larger button */
+    margin-top: 15px; /* Added more margin to separate from the "View in AR" link */
+    background-color: #28a745; /* Vibrant green color */
     color: #ffffff;
+    font-size: 14px; /* Slightly larger font */
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Rounded edges for a modern look */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .btn-buy:hover {
-    background-color: #5aa447; /* Darker green on hover */
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Adjust "View in AR" link */
+.btn-ar {
+    display: inline-block;
+    margin-right: 10px; /* Added space between "View in AR" and "Buy" button */
+    color: #6bbf59;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn-ar:hover {
+    color: #5aa447; /* Darker green on hover */
 }
