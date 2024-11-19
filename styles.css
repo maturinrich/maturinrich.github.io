@@ -23,14 +23,18 @@ body {
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
-    padding: 20px 40px; /* Adjusted padding to add space */
+    padding: 20px 60px; /* Added horizontal padding for space */
     border-bottom: 1px solid #d4d7d2;
     display: flex;
-    justify-content: space-between; /* Distributes space evenly between logo, nav links, and search bar */
+    justify-content: space-between; /* Spaces out logo, nav links, and search bar */
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+}
+
+.logo {
+    flex-shrink: 0; /* Prevents the logo from shrinking */
 }
 
 .logo img {
@@ -40,10 +44,9 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Adjusted gap between navigation links */
-    margin: 0 auto; /* Centering the navigation links */
-    flex-grow: 1; /* Allows the nav links to take up available space */
-    justify-content: center; /* Centers the nav links within the available space */
+    gap: 40px; /* Space between navigation links */
+    flex: 1; /* Allows the nav links to take up the available space */
+    justify-content: center; /* Centers the nav links within their space */
 }
 
 .nav-links a {
@@ -61,7 +64,7 @@ body {
 .search-bar {
     display: flex;
     gap: 10px;
-    margin-left: auto; /* Pushes the search bar to the right */
+    flex-shrink: 0; /* Prevents the search bar from shrinking */
 }
 
 .search-bar input {
@@ -84,6 +87,7 @@ body {
 .search-bar button:hover {
     background-color: #5aa447;
 }
+
 
 /* Hero Section */
 .hero {
