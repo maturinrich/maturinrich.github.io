@@ -757,3 +757,72 @@ body {
         width: 100%; /* Full bar */
     }
 }
+/* Black Friday Promotional Banner */
+.black-friday-banner {
+    background-color: #ff4b5c; /* Bright red color for attention */
+    color: #ffffff; /* White text for contrast */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.black-friday-banner h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.black-friday-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.black-friday-banner .btn-primary {
+    background-color: #ffffff;
+    color: #ff4b5c;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.black-friday-banner .btn-primary:hover {
+    background-color: #ff4b5c;
+    color: #ffffff;
+    border: 2px solid #ffffff; /* Adds a border on hover */
+}
+
+/* Optional: Decorative Elements */
+.black-friday-banner::before,
+.black-friday-banner::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: #ffffff;
+    opacity: 0.1;
+    border-radius: 50%;
+    animation: float 6s infinite ease-in-out;
+}
+
+.black-friday-banner::after {
+    top: auto;
+    bottom: -50px;
+    right: -50px;
+    left: auto;
+}
+
+/* Animation for Floating Decorative Elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
