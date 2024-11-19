@@ -565,20 +565,21 @@ body {
     margin-right: 20px; /* Space between the logo and navigation links */
 }
 
+/* Logo with Spinning Top Animation */
 .logo img {
-    width: 120px; /* Adjusted width for better visibility */
-    animation: spinPulse 5s infinite ease-in-out;
-    transition: transform 0.5s ease;
+    width: 100px; /* Adjust the size of your logo */
+    animation: spinTop 3s cubic-bezier(0.25, 1, 0.5, 1) infinite; /* Spinning like a top */
 }
 
 @keyframes spinTop {
-    from {
-        transform: rotate(0deg); /* Start position */
+    0% {
+        transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg); /* Full rotation */
     }
 }
+
 
 
 /* Navigation Links */
