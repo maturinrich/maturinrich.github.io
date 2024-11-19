@@ -33,37 +33,28 @@ body {
 }
 
 /* Logo Basic Styles */
-.logo img {
-    width: 100px; /* Adjust this size to fit your logo */
-    transition: transform 0.3s ease; /* Smooth transition for hover */
-    animation: logoAnimation 3s ease-in-out infinite; /* Continuous animation */
-}
 /* Logo Basic Styles */
 .logo img {
-    width: 100px; /* Adjust this size to fit your logo */
+    width: 100px; /* Adjust this to fit your logo size */
     transition: transform 0.3s ease; /* Smooth transition for hover */
-    animation: logoAnimation 3s ease-in-out infinite; /* Continuous animation */
+    animation: logoBounce 2s infinite ease-in-out; /* Continuous animation */
 }
 
 /* Keyframes for Logo Animation */
-@keyframes logoAnimation {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-    25% {
-        transform: scale(1.1) rotate(5deg);
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0); /* Initial and final position */
     }
     50% {
-        transform: scale(1.1) rotate(-5deg);
+        transform: translateY(-10px); /* Moves the logo up slightly */
     }
-    100% {
-        transform: scale(1) rotate(0deg);
 }
 
 /* Hover Effect for Logo */
 .logo img:hover {
-    transform: scale(1.2); /* Enlarges the logo on hover */
+    transform: scale(1.1); /* Scales the logo on hover */
 }
+
 
 .nav-links {
     list-style: none;
