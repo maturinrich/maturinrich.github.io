@@ -199,6 +199,26 @@ body {
     background-color: #6bbf59;
     color: #ffffff;
 }
+/* Button Styling */
+.btn-shop-now {
+    display: inline-block;
+    padding: 10px 25px; /* Adjust the padding as needed */
+    background-color: #6bbf59; /* Green background color */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Adjust the font size */
+    border: 2px solid #6bbf59; /* Border to match the background */
+    border-radius: 30px; /* Rounded edges */
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.btn-shop-now:hover {
+    transform: scale(1.1); /* Enlarges the button */
+    background-color: #5aa447; /* Darker green on hover */
+}
 
 /* Shop Section */
 .shop-section {
