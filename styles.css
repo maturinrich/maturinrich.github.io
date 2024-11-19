@@ -150,9 +150,43 @@ body {
 -
 /* Community Section */
 .community-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
+    padding: 60px 20px; /* Adjusted padding for a more spacious layout */
+    background: linear-gradient(135deg, #f0fff4, #e3ffe9); /* Soft green gradient for a natural feel */
+    border-radius: 15px; /* Rounded corners for a smoother appearance */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
+}
+
+.community-section h2 {
+    font-size: 2.5rem; /* Larger, bold heading */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.community-section p {
+    font-size: 1.2rem; /* Slightly larger font for readability */
+    color: #555; /* Softer text color */
+    margin-bottom: 25px; /* Space below the paragraph */
+}
+
+/* Community Button */
+.community-section .btn-primary {
+    background-color: #6bbf59;
+    color: #ffffff;
+    padding: 12px 30px; /* More padding for a prominent button */
+    border-radius: 25px; /* Rounded button corners */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.community-section .btn-primary:hover {
+    background-color: #5aa447; /* Darker green on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* Sustainability Section */
