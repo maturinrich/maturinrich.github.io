@@ -202,23 +202,28 @@ body {
 /* Button Styling */
 .btn-shop-now {
     display: inline-block;
-    padding: 10px 25px; /* Adjust the padding as needed */
-    background-color: #6bbf59; /* Green background color */
-    color: #ffffff; /* White text */
-    font-size: 16px; /* Adjust the font size */
-    border: 2px solid #6bbf59; /* Border to match the background */
-    border-radius: 30px; /* Rounded edges */
+    padding: 10px 25px;
+    background-color: #6bbf59;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #6bbf59;
+    border-radius: 30px;
     text-align: center;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    animation: blink 1s infinite; /* Blinking animation */
 }
 
-/* Hover Effect */
-.btn-shop-now:hover {
-    transform: scale(1.1); /* Enlarges the button */
-    background-color: #5aa447; /* Darker green on hover */
+/* Keyframes for Blinking Effect */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
 }
+
 
 /* Shop Section */
 .shop-section {
