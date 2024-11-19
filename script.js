@@ -1,9 +1,29 @@
-// Show back-to-top button when scrolling
-window.onscroll = function() {
-   const backToTop = document.querySelector('.back-to-top');
-   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-       backToTop.style.display = 'block';
-   } else {
-       backToTop.style.display = 'none';
-   }
-};
+// Particle Effect Initialization
+particlesJS.load('particles-js', 'path/to/particles-config.json', function() {
+    console.log('Particles.js loaded!');
+});
+
+// Scroll Reveal
+document.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('visible');
+        } else {
+            reveals[i].classList.remove('visible');
+        }
+    }
+});
+
+// Menu Toggle Example
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.menu').classList.toggle('open');
+});
+
+// Example Loader Display
+window.addEventListener('load', function() {
+    document.querySelector('.loader').style.display = 'none';
+});
