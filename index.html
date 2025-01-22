@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN Insights - Learn About VPNs</title>
+    <title>How VPN Works</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -29,8 +29,8 @@
     <!-- Intro Section -->
     <section id="intro" class="section">
         <div class="container">
-            <h1>VPN Insights Overview</h1>
-            <p>Explore the world of VPNs with real-time data and insights into the industry's growth, trends, and usage statistics.</p>
+            <h1>How Does a VPN Work?</h1>
+            <p>Discover how a VPN secures your connection, encrypts your data, and protects your identity online.</p>
         </div>
     </section>
 
@@ -47,17 +47,19 @@
                 <!-- Encrypted Tunnel -->
                 <div class="diagram-line">
                     <div class="tunnel" id="tunnel1">
-                        <div class="envelope" id="envelope"></div>
+                        <div class="data-packet" id="data-packet">🔒</div>
                     </div>
+                    <p class="description">Encrypted Tunnel</p>
                 </div>
                 <!-- VPN Server -->
                 <div class="diagram-node" id="vpn-server">
                     <div class="icon vpn-icon">🛡️</div>
                     <p>VPN Server</p>
                 </div>
-                <!-- Encrypted Tunnel -->
+                <!-- IP Address Masking -->
                 <div class="diagram-line">
                     <div class="tunnel" id="tunnel2"></div>
+                    <p class="description">New IP Address</p>
                 </div>
                 <!-- Internet -->
                 <div class="diagram-node" id="internet">
@@ -84,26 +86,6 @@
                 <div class="chart-container line-chart">
                     <canvas id="vpnLineChart"></canvas>
                 </div>
-
-                <!-- Stats -->
-                <div class="stats-container">
-                    <div class="stat-card">
-                        <h3>Global Revenue</h3>
-                        <p><strong>$44.6B</strong> <span class="positive">+10%</span></p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>VPN Users</h3>
-                        <p><strong>700M</strong> <span class="neutral">+2%</span></p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Market Growth</h3>
-                        <p><strong>13.3%</strong> <span class="positive">+0.5%</span></p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Security Breaches Avoided</h3>
-                        <p><strong>4.2M</strong> <span class="positive">+15%</span></p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -120,15 +102,6 @@
                 <h3>Is VPN legal?</h3>
                 <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:support@vpninsights.com">support@vpninsights.com</a></p>
-            <p>Phone: +1 (800) 555-VPN</p>
         </div>
     </section>
 
