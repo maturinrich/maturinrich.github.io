@@ -38,4 +38,21 @@ new Chart(lineCtx, {
             label: 'VPN Market Growth',
             data: [30, 35, 40, 44.6, 50],
             backgroundColor: 'rgba(59, 130, 246, 0.2)',
-            borderColor: '#3B82F
+            borderColor: '#3B82F6',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
