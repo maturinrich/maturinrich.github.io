@@ -1,835 +1,241 @@
-/* Reset Styles */
+/* Palette de couleurs */
+:root {
+    --light-blue: #DBE9F9;
+    --soft-blue: #B9D4F3;
+    --medium-blue: #75AAE7;
+    --vivid-blue: #3982DC;
+    --dark-blue: #1F5CAB;
+    --text-color: #333;
+    --white: #ffffff;
+    --button-hover: #164A7E;
+}
+
+/* Reset général */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-.spacer {
-    flex: 1; /* Remplit l'espace disponible */
-}
-/* About Us Section */
-.about-section {
-    background: linear-gradient(135deg, #e0f7ec, #d7f5d2); /* Soft green gradient for a nature-inspired look */
-    padding: 80px 30px;
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    color: #333;
+    box-sizing: border-box;
 }
 
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-}
-
-.about-text {
-    flex: 1;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.about-text h2 {
-    font-size: 2.8rem; /* Larger, bold heading */
-    color: #4caf50; /* Vibrant green for the heading */
-    margin-bottom: 20px;
-    border-bottom: 3px solid #6bbf59; /* Decorative underline */
-    display: inline-block; /* Makes the underline adjust to the text width */
-}
-
-.about-text p {
-    font-size: 1.2rem; /* Slightly larger text for readability */
-    line-height: 1.8; /* Increased line spacing */
-    color: #555;
-}
-
-.about-image {
-    flex: 1;
-    max-width: 600px;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 15px; /* Rounded corners for the image */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow for emphasis */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-image img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column; /* Stack items on smaller screens */
-        text-align: center;
-    }
-    .about-text {
-        text-align: center;
-    }
-}
-
-/* General Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--light-blue);
+    scroll-behavior: smooth;
 }
 
-/* Container */
+/* Container général */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Feedback Section */
-.feedback-section {
-    padding: 60px 30px;
-    background: linear-gradient(135deg, #ffffff, #f0f8f5); /* Soft gradient background */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.feedback-section h2 {
-    font-size: 2.5rem; /* Larger heading */
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 30px; /* Space below the heading */
-}
-
-.feedback-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between feedback cards */
-    justify-content: center; /* Center the feedback cards */
-}
-
-.feedback-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
-    padding: 20px;
-    max-width: 300px;
-    flex: 1 1 calc(33.333% - 20px); /* Responsive card layout */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feedback-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-.feedback-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 15px; /* Space between text and name */
-    line-height: 1.5;
-}
-
-.feedback-card h4 {
-    font-size: 1.1rem;
-    color: #6bbf59; /* Highlighted name color */
-    font-weight: bold;
-}
-
-
-
-
-/* Hero Section */
-.hero {
-    background-image: url('banniere.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-}
-.hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 10px;
-}
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: #6bbf59;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-.btn-primary:hover {
-    background-color: #5aa447;
-}
-.btn-secondary {
-    background-color: #ffffff;
-    color: #6bbf59;
-    padding: 10px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    border: 2px solid #6bbf59;
-    margin-left: 10px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.btn-secondary:hover {
-    background-color: #6bbf59;
-    color: #ffffff;
-}
-
-
-
-/* Shop Section */
-.shop-section {
-    padding: 60px 20px; /* Adjusted padding for a spacious layout */
-    background-color: #f9f9f9; /* Light background for a clean look */
-    border-radius: 15px; /* Rounded corners for a smooth appearance */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center;
-}
-
-.shop-section h2 {
-    font-size: 2.5rem; /* Larger heading font size */
-    font-weight: 700; /* Bold heading */
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.shop-section p {
-    font-size: 1.1rem; /* Slightly larger font for better readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 25px;
-}
-
-/* Filter Bar */
-.filter-bar {
-    display: flex;
-    justify-content: center; /* Center the filter bar */
-    align-items: center;
-    gap: 15px; /* Space between the dropdown and button */
-    margin-bottom: 20px; /* Space below the filter bar */
-}
-
-.filter-bar select {
-    padding: 10px 15px; /* More padding for a modern look */
-    border: 2px solid #c7d3c2; /* Thicker border for emphasis */
-    border-radius: 25px; /* Rounded corners */
-    background-color: #ffffff; /* White background for contrast */
-    color: #333; /* Dark text color */
-    font-size: 14px; /* Font size for readability */
-    cursor: pointer;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.filter-bar select:hover {
-    border-color: #6bbf59; /* Green border on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
-}
-
-.filter-bar button {
-    padding: 10px 20px; /* More padding for a larger button */
-    background-color: #6bbf59; /* Plant green color */
-    color: #ffffff; /* White text color */
-    border: none;
-    border-radius: 25px; /* Rounded corners */
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.filter-bar button:hover {
-    background-color: #5aa447; /* Darker green on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
--
-/* Community Section */
-.community-section {
-    padding: 60px 20px; /* Adjusted padding for a more spacious layout */
-    background: linear-gradient(135deg, #f0fff4, #e3ffe9); /* Soft green gradient for a natural feel */
-    border-radius: 15px; /* Rounded corners for a smoother appearance */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center;
-}
-
-.community-section h2 {
-    font-size: 2.5rem; /* Larger, bold heading */
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px; /* Space below the heading */
-}
-
-.community-section p {
-    font-size: 1.2rem; /* Slightly larger font for readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 25px; /* Space below the paragraph */
-}
-
-/* Community Button */
-.community-section .btn-primary {
-    background-color: #6bbf59;
-    color: #ffffff;
-    padding: 12px 30px; /* More padding for a prominent button */
-    border-radius: 25px; /* Rounded button corners */
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-.community-section .btn-primary:hover {
-    background-color: #5aa447; /* Darker green on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Sustainability Section */
-.sustainability-section {
-    padding: 60px 30px; /* Added more padding for a spacious layout */
-    background: linear-gradient(135deg, #e6f9e6, #f9f9f9); /* Soft green gradient background */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: left;
-}
-
-.sustainability-section h2 {
-    font-size: 2.5rem; /* Larger heading font size */
-    font-weight: 700; /* Bold heading */
-    color: #333;
-    margin-bottom: 15px; /* Space below the heading */
-}
-
-.sustainability-section p {
-    font-size: 1.1rem; /* Slightly larger font for better readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 20px; /* Space below the paragraph */
-}
-
-.sustainability-section ul {
-    list-style-type: none; /* Removed default bullet points */
-    padding-left: 0;
-}
-
-.sustainability-section li {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 10px;
-    padding-left: 30px; /* Added space to align icons */
-    position: relative;
-}
-
-.sustainability-section li::before {
-    content: '🌱'; /* Added a leaf icon for a more thematic bullet point */
-    position: absolute;
-    left: 0;
-    font-size: 1.2rem; /* Icon size */
-    color: #6bbf59; /* Icon color */
-}
-
-
-/* Contact Section */
-.contact-section {
-    padding: 60px 30px; /* More padding for a spacious layout */
-    background-color: #f9f9f9; /* Soft background color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem; /* Larger heading */
-    font-weight: 700; /* Bold heading */
-    color: #333;
-    margin-bottom: 15px; /* Space below the heading */
-}
-
-.contact-section p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px; /* Space below the introductory text */
-}
-
-.contact-details {
-    list-style: none; /* Remove default list styling */
-    padding-left: 0;
-    margin-top: 20px;
-}
-
-.contact-details li {
-    font-size: 1rem;
-    color: #444;
-    margin-bottom: 10px; /* Space between contact details */
-}
-
-.contact-details a {
-    color: #6bbf59; /* Plant green for links */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.contact-details a:hover {
-    color: #5aa447; /* Darker green on hover */
-}
-
-/* Footer */
-.footer {
-    background-color: #333; /* Dark background for contrast */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-top-left-radius: 15px; /* Rounded corners for a smooth transition */
-    border-top-right-radius: 15px;
-}
-
-.footer p {
-    margin-bottom: 10px;
-    font-size: 0.9rem; /* Slightly smaller font for the footer text */
-    color: #ddd; /* Lighter text color for readability */
-}
-
-.footer .social-links a {
-    color: #6bbf59;
-    text-decoration: none;
-    margin: 0 15px; /* Space between social links */
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.footer .social-links a:hover {
-    color: #5aa447; /* Darker green on hover */
-}
-
-/* Buy Button */
-.btn-buy {
-    display: inline-block;
-    padding: 10px 25px;
-    margin-top: 15px;
-    background-color: #28a745;
-    color: #ffffff;
-    font-size: 14px;
-    border: none;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.btn-buy:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Adjust "View in AR" link */
-.btn-ar {
-    display: inline-block;
-    margin-right: 10px;
-    color: #6bbf59;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-.btn-ar:hover {
-    color: #5aa447;
-}
-
-/* Filter Bar */
-.filter-bar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-.filter-bar select {
-    padding: 8px 12px;
-    border: 1px solid #c7d3c2;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    color: #333;
-    font-size: 14px;
-    cursor: pointer;
-    transition: border-color 0.3s;
-}
-.filter-bar select:hover {
-    border-color: #6bbf59;
-}
-.filter-bar button {
-    padding: 8px 16px;
-    background-color: #6bbf59;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.filter-bar button:hover {
-    background-color: #5aa447;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-/* Navigation Bar */
-.navbar {
-    background-color: #ffffff;
-    padding: 30px 80px; /* Increased padding for more space */
-    border-bottom: 1px solid #d4d7d2;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-/* Quiz Section */
-.quiz-section {
-    padding: 60px 20px; /* Adjusted padding for a more spacious layout */
-    background: linear-gradient(135deg, #e3fdf5, #ffe6fa); /* Soft gradient background */
-    text-align: center;
-    border-radius: 15px; /* Rounded corners for a smoother look */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.quiz-section h2 {
-    font-size: 2.5rem; /* Larger font for the heading */
-    color: #333;
-    font-weight: 700; /* Bold heading */
-    margin-bottom: 15px; /* Space below the heading */
-}
-
-.quiz-section p {
-    font-size: 1.2rem; /* Slightly larger font for better readability */
-    color: #555; /* Softer text color */
-    margin-bottom: 25px; /* Space below the paragraph */
-}
-
-.quiz-section .btn-primary {
-    background-color: #6bbf59;
-    color: #ffffff;
-    padding: 12px 30px; /* Larger button with more padding */
-    border-radius: 25px; /* Rounded corners for a modern look */
-    font-size: 1rem; /* Increased font size */
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
-}
-
-.quiz-section .btn-primary:hover {
-    background-color: #5aa447; /* Darker green on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
 /* Navigation Bar */
 .navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
-    padding: 20px 40px; /* Reduced padding to fit more elements */
-    border-bottom: 1px solid #d4d7d2;
+    align-items: center;
+    background-color: var(--vivid-blue);
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-/* Logo */
-.logo {
-    flex: 0 0 auto; /* Ensures the logo does not stretch */
-    margin-right: 20px; /* Space between the logo and navigation links */
-}
-
-
-/* Logo with 3D Spinning Animation */
-.logo img {
-    width: 100px; 
-    transform-origin: center; 
-    animation: spin3D 3s infinite linear; 
-}
-
-@keyframes spin3D {
-    0% {
-        transform: rotate3d(1, 1, 0, 0deg); 
-    }
-    100% {
-        transform: rotate3d(1, 1, 0, 360deg); 
-    }
-}
-
-
-
-/* Navigation Links */
-.nav-links-container {
-    flex: 1; /* Takes up available space */
-    display: flex;
-    justify-content: center; /* Centered navigation links */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* Space between each link */
+    gap: 20px;
 }
 
 .nav-links a {
-    color: #2d2d2d;
+    color: var(--white);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    font-size: 1rem; /* Slightly larger font size */
 }
 
 .nav-links a:hover {
-    color: #6bbf59;
+    color: var(--soft-blue);
 }
 
-/* Right Elements */
-.right-elements {
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Space between search bar and auth links */
-    flex: 0 0 auto; /* Prevents stretching */
-}
-
-/* Auth Links */
-.auth-links {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-links a {
+.right-elements .btn-signup {
+    background-color: var(--medium-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.btn-signup {
-    background-color: #6bbf59;
-    color: #ffffff;
+.right-elements .btn-signup:hover {
+    background-color: var(--button-hover);
 }
 
-.btn-signup:hover {
-    background-color: #5aa447;
-}
-
-.btn-signin {
-    background-color: transparent;
-    color: #6bbf59;
-    border: 2px solid #6bbf59;
-}
-
-.btn-signin:hover {
-    background-color: #6bbf59;
-    color: #ffffff;
-}
-
-/* Search Bar */
 .search-bar {
     display: flex;
+    align-items: center;
     gap: 10px;
-    background-color: #f8f8f8; /* Light background for the search bar */
-    padding: 5px 10px;
-    border-radius: 25px; /* Rounded edges */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: var(--white);
+    padding: 5px 15px;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar input {
     border: none;
-    background-color: transparent;
     outline: none;
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: transparent;
     flex: 1;
 }
 
 .search-bar button {
-    padding: 8px 16px;
+    background-color: var(--vivid-blue);
+    color: var(--white);
     border: none;
-    background-color: #6bbf59;
-    color: #fff;
+    padding: 8px 16px;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: #5aa447;
+    background-color: var(--button-hover);
 }
-/* Statistics Section */
-.statistics-section {
-    background-color: #f3f3f3;
-    padding: 60px 0;
+
+/* Hero Section */
+.hero {
+    background-image: url('hero-image.jpg'); /* Remplace avec ton image */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
     text-align: center;
-}
-
-.statistics-section h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 40px;
-}
-
-.stats-grid {
+    height: 90vh;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.stat-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
     padding: 30px;
-    width: calc(25% - 20px);
-    transition: transform 0.3s;
-    position: relative;
+    border-radius: 10px;
 }
 
-.stat-item:hover {
-    transform: translateY(-10px);
-}
-
-.stat-item h3 {
-    font-size: 2.5rem;
-    color: #6bbf59;
-    margin-bottom: 10px;
-}
-
-.stat-item p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Bar Graph Styling */
-.bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    height: 10px;
-    width: 100%;
-}
-
-.fill {
-    background-color: #6bbf59;
-    height: 100%;
-    width: 0;
-    border-radius: 5px;
-    animation: fillBar 2s forwards; /* Animates the bar filling */
-}
-
-@keyframes fillBar {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%; /* Full bar */
-    }
-}
-/* Black Friday Promotional Banner */
-.black-friday-banner {
-    background-color: #ff4b5c; /* Bright red color for attention */
-    color: #ffffff; /* White text for contrast */
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.black-friday-banner h2 {
+.hero h1 {
     font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-.black-friday-banner p {
-    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-.black-friday-banner .btn-primary {
-    background-color: #ffffff;
-    color: #ff4b5c;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--medium-blue);
+    color: var(--white);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.black-friday-banner .btn-primary:hover {
-    background-color: #ff4b5c;
-    color: #ffffff;
-    border: 2px solid #ffffff; /* Adds a border on hover */
+.btn-primary:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-3px);
 }
 
-/* Bannière Black Friday fixée avec défilement continu */
-.black-friday-scroll-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ff4b5c;
-    color: #ffffff;
-    padding: 10px 0;
-    z-index: 10000;
-    overflow: hidden;
+/* About Section */
+.about-section {
+    background-color: var(--white);
+    color: var(--text-color);
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: var(--vivid-blue);
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.features-section {
+    background-color: var(--soft-blue);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 30px;
+}
+
+.features-grid {
     display: flex;
-    align-items: center;
+    gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.scroll-content {
-    display: flex;
-    white-space: nowrap;
-    animation: scrollBanner 40s linear infinite;
+.feature-item {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.scroll-content p {
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0 50px;
-    display: inline-block;
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation de défilement */
-@keyframes scrollBanner {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+.feature-item img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--soft-blue);
 }
