@@ -1,115 +1,55 @@
-/* Section Borders */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 3px solid var(--accent-color-light);
-}
-
-body.dark-mode .section {
-    border-bottom: 3px solid var(--accent-color-dark);
-}
-
-/* Dashboard Charts */
-.dashboard-charts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.stat-list {
-    text-align: left;
-    font-size: 1rem;
-    color: var(--muted-text-light);
-}
-
-body.dark-mode .stat-list {
-    color: var(--muted-text-dark);
-}
-
-/* Color Palette */
+/* Colors for Light and Dark Modes */
 :root {
-    /* Light Mode Colors */
-    --bg-color-light: #F4F7FA;
-    --text-color-light: #1F2937;
-    --secondary-bg-light: #FFFFFF;
-    --accent-color-light: #3B82F6;
-    --hover-accent-color-light: #2563EB;
-    --muted-text-light: #6B7280;
-
-    /* Dark Mode Colors */
-    --bg-color-dark: #1E293B;
-    --text-color-dark: #E2E8F0;
-    --secondary-bg-dark: #2D3748;
-    --accent-color-dark: #63B3ED;
-    --hover-accent-color-dark: #4299E1;
-    --muted-text-dark: #A0AEC0;
-
-    /* Common Colors */
-    --success-color: #48BB78;
-    --warning-color: #ECC94B;
-    --error-color: #F56565;
+    --bg-light: #F9FAFB;
+    --bg-dark: #1E293B;
+    --text-light: #111827;
+    --text-dark: #F9FAFB;
+    --accent-light: #3B82F6;
+    --accent-dark: #63B3ED;
+    --card-bg-light: #FFFFFF;
+    --card-bg-dark: #2D3748;
+    --positive: #48BB78;
+    --neutral: #ECC94B;
+    --negative: #F56565;
 }
 
-/* Default Light Mode */
 body {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: all 0.3s ease;
 }
 
-/* Dark Mode */
 body.dark-mode {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
-
-/* General Styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
 }
 
 h1, h2, h3 {
-    color: var(--accent-color-light);
-    transition: color 0.3s;
+    color: var(--accent-light);
 }
 
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: var(--accent-color-dark);
+    color: var(--accent-dark);
 }
 
-p {
-    color: var(--muted-text-light);
-    transition: color 0.3s;
-}
-
-body.dark-mode p {
-    color: var(--muted-text-dark);
-}
-
-/* Navbar */
+/* Navigation Bar */
 .navbar {
-    background-color: var(--secondary-bg-light);
+    background-color: var(--card-bg-light);
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 body.dark-mode .navbar {
-    background-color: var(--secondary-bg-dark);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: var(--card-bg-dark);
 }
 
 .nav-links {
@@ -120,139 +60,55 @@ body.dark-mode .navbar {
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color-light);
+    color: var(--text-light);
     font-weight: bold;
-    transition: color 0.3s;
 }
 
 body.dark-mode .nav-links a {
-    color: var(--text-color-dark);
+    color: var(--text-dark);
 }
 
 .nav-links a:hover {
-    color: var(--accent-color-light);
+    color: var(--accent-light);
 }
 
-body.dark-mode .nav-links a:hover {
-    color: var(--accent-color-dark);
-}
-
-/* Buttons */
-.btn-dark-mode {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: var(--accent-color-light);
-    color: var(--secondary-bg-light);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-body.dark-mode .btn-dark-mode {
-    background-color: var(--accent-color-dark);
-    color: var(--text-color-dark);
-}
-
-.btn-dark-mode:hover {
-    background-color: var(--hover-accent-color-light);
-}
-
-body.dark-mode .btn-dark-mode:hover {
-    background-color: var(--hover-accent-color-dark);
-}
-
-/* Features Section */
-.features-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.feature-card {
-    background-color: var(--secondary-bg-light);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-body.dark-mode .feature-card {
-    background-color: var(--secondary-bg-dark);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    background-color: var(--accent-color-light);
-    color: var(--secondary-bg-light);
-}
-
-body.dark-mode .feature-card:hover {
-    background-color: var(--accent-color-dark);
-    color: var(--text-color-dark);
-}
-
-/* Dashboard */
-#dashboard canvas {
+/* Charts and Indicators */
+.chart-container {
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 700px;
 }
 
-.source {
-    font-size: 0.8rem;
-    color: var(--muted-text-light);
-    margin-top: 10px;
-}
-
-body.dark-mode .source {
-    color: var(--muted-text-dark);
-}
-
-.source a {
-    color: var(--accent-color-light);
-    text-decoration: none;
-}
-
-body.dark-mode .source a {
-    color: var(--accent-color-dark);
-}
-
-.source a:hover {
-    text-decoration: underline;
-}
-
-/* Stats */
-.stats {
-    display: flex;
-    justify-content: center;
+.indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-.stat-item {
-    background-color: var(--secondary-bg-light);
-    border-radius: 10px;
-    padding: 20px;
+.indicator {
+    background-color: var(--card-bg-light);
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-body.dark-mode .stat-item {
-    background-color: var(--secondary-bg-dark);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+body.dark-mode .indicator {
+    background-color: var(--card-bg-dark);
 }
 
-.stat-item:hover {
-    transform: translateY(-5px);
-    background-color: var(--accent-color-light);
-    color: var(--secondary-bg-light);
+.indicator p {
+    margin: 5px 0 0;
 }
 
-body.dark-mode .stat-item:hover {
-    background-color: var(--accent-color-dark);
-    color: var(--text-color-dark);
+.positive {
+    color: var(--positive);
+}
+
+.neutral {
+    color: var(--neutral);
+}
+
+.negative {
+    color: var(--negative);
 }
