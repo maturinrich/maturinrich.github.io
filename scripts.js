@@ -56,3 +56,14 @@ new Chart(lineCtx, {
         }
     }
 });
+
+// Envelope Animation Interaction
+const envelope = document.getElementById('envelope');
+const vpnServer = document.querySelector('.vpn-icon');
+
+envelope.addEventListener('animationiteration', () => {
+    vpnServer.style.backgroundColor = '#48BB78'; // Turn VPN green
+    setTimeout(() => {
+        vpnServer.style.backgroundColor = '#F56565'; // Reset back to red
+    }, 1500);
+});
