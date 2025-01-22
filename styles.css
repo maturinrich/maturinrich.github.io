@@ -1,91 +1,9 @@
-/* Root Variables */
-:root {
-    --bg-light: #F9FAFB;
-    --bg-dark: #1E293B;
-    --text-light: #111827;
-    --text-dark: #F9FAFB;
-    --accent-light: #3B82F6;
-    --accent-dark: #63B3ED;
-    --card-bg-light: #FFFFFF;
-    --card-bg-dark: #2D3748;
+/* Section General Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: all 0.3s ease;
-}
-
-body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-}
-
-h1, h2, h3 {
-    color: var(--accent-light);
-}
-
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: var(--accent-dark);
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: var(--card-bg-light);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .navbar {
-    background-color: var(--card-bg-dark);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-light);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode .nav-links a {
-    color: var(--text-dark);
-}
-
-.nav-links a:hover {
-    color: var(--accent-light);
-}
-
-.btn-dark-mode {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--accent-light);
-    color: var(--card-bg-light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .btn-dark-mode {
-    background-color: var(--accent-dark);
-    color: var(--text-dark);
-}
-
-/* VPN Diagram */
 .vpn-diagram {
     display: flex;
     align-items: center;
@@ -107,6 +25,7 @@ body.dark-mode .btn-dark-mode {
     padding: 20px;
     border-radius: 50%;
     color: var(--card-bg-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -151,13 +70,14 @@ body.dark-mode .icon {
 @keyframes movePacket {
     0% {
         left: 0;
+        background-color: #FFD700; /* Encrypted Data */
     }
     33% {
         left: 100%;
     }
     50% {
         left: 100%;
-        background-color: #48BB78;
+        background-color: #48BB78; /* Data Secured at VPN */
     }
     66% {
         left: 0;
@@ -165,4 +85,11 @@ body.dark-mode .icon {
     100% {
         left: 0;
     }
+}
+
+/* Descriptions */
+.description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-light);
 }
