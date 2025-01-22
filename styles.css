@@ -102,6 +102,7 @@ body.dark-mode .btn-dark-mode {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    position: relative;
 }
 
 .diagram-node {
@@ -124,19 +125,60 @@ body.dark-mode .icon {
     background-color: var(--accent-dark);
 }
 
+.vpn-icon {
+    background-color: #F56565; /* Red by default */
+    transition: background-color 0.3s ease;
+}
+
 .icon:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Tunnel Lines */
 .tunnel {
     width: 200px;
     height: 10px;
     background: linear-gradient(90deg, #63B3ED, #3B82F6);
     position: relative;
-    animation: tunnel-glow 3s infinite alternate;
 }
 
+/* Envelope */
+.envelope {
+    width: 30px;
+    height: 20px;
+    background: #FFD700;
+    border: 1px solid #DAA520;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    border-radius: 3px;
+    animation: moveEnvelope 6s linear infinite;
+}
+
+@keyframes moveEnvelope {
+    0% {
+        left: 0;
+        background: #FFD700; /* Gold color */
+    }
+    33% {
+        left: 100%;
+        background: #FFD700;
+    }
+    50% {
+        left: 100%;
+        background: #48BB78; /* Green (at VPN Server) */
+    }
+    66% {
+        left: 0;
+        background: #FFD700;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Tunnel Glow */
 @keyframes tunnel-glow {
     0% {
         box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
@@ -144,6 +186,10 @@ body.dark-mode .icon {
     100% {
         box-shadow: 0 0 20px rgba(59, 130, 246, 1);
     }
+}
+
+.tunnel {
+    animation: tunnel-glow 3s infinite alternate;
 }
 
 /* Dashboard Styles */
