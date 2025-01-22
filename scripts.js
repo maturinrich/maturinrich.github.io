@@ -1,8 +1,9 @@
 // Dark Mode Toggle
-const darkModeButton = document.getElementById('toggle-dark-mode');
+const themeToggle = document.getElementById('theme-toggle');
 
-darkModeButton.addEventListener('click', () => {
+themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
-    darkModeButton.textContent =
-        document.body.classList.contains('light-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    themeToggle.textContent = document.body.classList.contains('light-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
 });
