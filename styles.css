@@ -1,12 +1,11 @@
-/* Définition de la palette */
+/* Palette de couleurs */
 :root {
-    --color-light: #DBE9F9;   /* Couleur très claire */
-    --color-soft: #B9D4F3;   /* Couleur douce */
-    --color-medium: #75AAE7; /* Couleur intermédiaire */
-    --color-vivid: #3982DC;  /* Couleur vive */
-    --color-dark: #1F5CAB;   /* Couleur foncée */
-    --text-color: #333333;   /* Couleur du texte */
-    --white: #ffffff;        /* Blanc */
+    --color-dark-blue: #1F2937; /* Couleur très sombre */
+    --color-medium-dark-blue: #374151; /* Bleu foncé */
+    --color-light-blue: #93C5FD; /* Bleu clair */
+    --color-bright-blue: #3B82F6; /* Bleu vif */
+    --color-black: #0F172A; /* Noir profond */
+    --text-color: #E5E7EB; /* Blanc cassé pour les textes */
 }
 
 /* Reset général */
@@ -18,22 +17,22 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: var(--color-dark-blue); /* Arrière-plan principal */
+    color: var(--text-color); /* Texte principal */
+    scroll-behavior: smooth;
     line-height: 1.6;
-    background-color: var(--color-light); /* Couleur principale */
-    color: var(--text-color);
 }
 
-/* Conteneur principal */
+/* Conteneur */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation Bar */
 .navbar {
-    background-color: var(--color-vivid); /* Arrière-plan intense */
-    color: var(--white);
+    background-color: var(--color-black); /* Couleur sombre */
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -41,7 +40,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .nav-links {
@@ -51,14 +50,14 @@ body {
 }
 
 .nav-links a {
-    color: var(--white);
+    color: var(--text-color); /* Texte clair */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--color-soft); /* Couleur douce pour le survol */
+    color: var(--color-bright-blue); /* Survol bleu vif */
 }
 
 .right-elements {
@@ -71,22 +70,24 @@ body {
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: var(--white);
+    background-color: var(--color-medium-dark-blue);
     padding: 5px 15px;
     border-radius: 25px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .search-bar input {
     border: none;
     outline: none;
     font-size: 1rem;
+    background-color: transparent;
+    color: var(--text-color);
     flex: 1;
 }
 
 .search-bar button {
-    background-color: var(--color-medium); /* Couleur bouton */
-    color: var(--white);
+    background-color: var(--color-bright-blue);
+    color: var(--text-color);
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
@@ -95,24 +96,27 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: var(--color-dark); /* Couleur sombre au survol */
+    background-color: var(--color-light-blue);
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg'); /* Image à remplacer */
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+    background: linear-gradient(to bottom, var(--color-dark-blue), var(--color-black));
+    color: var(--text-color);
     text-align: center;
     height: 90vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('hero-image.jpg'); /* Remplace par ton image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     padding: 40px;
     border-radius: 10px;
 }
@@ -120,6 +124,7 @@ body {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    color: var(--color-light-blue);
 }
 
 .hero p {
@@ -128,8 +133,8 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--color-medium);
-    color: var(--white);
+    background-color: var(--color-bright-blue);
+    color: var(--text-color);
     padding: 12px 30px;
     border-radius: 30px;
     text-decoration: none;
@@ -138,22 +143,22 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--color-dark); /* Plus sombre au survol */
+    background-color: var(--color-light-blue);
     transform: translateY(-3px);
 }
 
-/* Section "À propos" */
+/* About Section */
 .about-section {
-    background-color: var(--white);
+    background-color: var(--color-medium-dark-blue);
     padding: 60px 20px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .about-section h2 {
     font-size: 2.5rem;
-    color: var(--color-dark);
+    color: var(--color-light-blue);
     margin-bottom: 20px;
 }
 
@@ -165,7 +170,7 @@ body {
 
 /* Features Section */
 .features-section {
-    background-color: var(--color-soft);
+    background-color: var(--color-black);
     padding: 60px 20px;
     text-align: center;
     border-radius: 15px;
@@ -173,7 +178,7 @@ body {
 
 .features-section h2 {
     font-size: 2.5rem;
-    color: var(--color-dark);
+    color: var(--color-light-blue);
     margin-bottom: 30px;
 }
 
@@ -185,9 +190,9 @@ body {
 }
 
 .feature-item {
-    background-color: var(--white);
+    background-color: var(--color-medium-dark-blue);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
     width: 300px;
@@ -196,7 +201,7 @@ body {
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
 }
 
 .feature-item img {
@@ -206,8 +211,8 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--color-dark);
-    color: var(--white);
+    background-color: var(--color-dark-blue);
+    color: var(--text-color);
     padding: 20px;
     text-align: center;
 }
@@ -217,12 +222,12 @@ body {
 }
 
 .footer a {
-    color: var(--white);
+    color: var(--color-light-blue);
     text-decoration: none;
     margin: 0 10px;
     transition: color 0.3s;
 }
 
 .footer a:hover {
-    color: var(--color-soft); /* Couleur douce */
+    color: var(--color-bright-blue);
 }
