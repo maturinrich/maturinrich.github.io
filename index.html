@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN Insights - Dashboard</title>
+    <title>VPN Insights - Optimized Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,7 +15,6 @@
             <div class="logo">VPN Insights</div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#intro">Overview</a></li>
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -25,73 +24,43 @@
         </div>
     </header>
 
-    <!-- Intro Section -->
-    <section id="intro" class="section">
-        <div class="container">
-            <h1>VPN Insights Overview</h1>
-            <p>Explore the world of VPNs with real-time data and insights into the industry's growth, trends, and usage statistics.</p>
-        </div>
-    </section>
-
     <!-- Dashboard Section -->
     <section id="dashboard" class="section">
         <div class="container">
             <h2>VPN Usage Dashboard</h2>
             <p>A comprehensive view of VPN usage and market trends.</p>
-            
-            <!-- Line Chart -->
-            <div class="chart-container">
-                <canvas id="vpnLineChart"></canvas>
-            </div>
 
-            <!-- Indicators -->
-            <div class="indicators">
-                <div class="indicator">
-                    <h3>Global Revenue</h3>
-                    <p><strong>$44.6B</strong> <span class="positive">+10%</span></p>
+            <div class="dashboard-grid">
+                <!-- Pie Chart -->
+                <div class="chart-container pie-chart">
+                    <canvas id="vpnPieChart"></canvas>
                 </div>
-                <div class="indicator">
-                    <h3>VPN Users</h3>
-                    <p><strong>700M</strong> <span class="neutral">+2%</span></p>
-                </div>
-                <div class="indicator">
-                    <h3>Market Growth</h3>
-                    <p><strong>13.3%</strong> <span class="positive">+0.5%</span></p>
-                </div>
-                <div class="indicator">
-                    <h3>Security Breaches Avoided</h3>
-                    <p><strong>4.2M</strong> <span class="positive">+15%</span></p>
-                </div>
-            </div>
 
-            <!-- Pie Chart -->
-            <div class="chart-container">
-                <canvas id="vpnPieChart"></canvas>
-            </div>
-        </div>
-    </section>
+                <!-- Line Chart -->
+                <div class="chart-container line-chart">
+                    <canvas id="vpnLineChart"></canvas>
+                </div>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>What is a VPN?</h3>
-                <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
+                <!-- Stats -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>Global Revenue</h3>
+                        <p><strong>$44.6B</strong> <span class="positive">+10%</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>VPN Users</h3>
+                        <p><strong>700M</strong> <span class="neutral">+2%</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Market Growth</h3>
+                        <p><strong>13.3%</strong> <span class="positive">+0.5%</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Security Breaches Avoided</h3>
+                        <p><strong>4.2M</strong> <span class="positive">+15%</span></p>
+                    </div>
+                </div>
             </div>
-            <div class="faq-item">
-                <h3>Is VPN legal?</h3>
-                <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: <a href="mailto:support@vpninsights.com">support@vpninsights.com</a></p>
-            <p>Phone: +1 (800) 555-VPN</p>
         </div>
     </section>
 
