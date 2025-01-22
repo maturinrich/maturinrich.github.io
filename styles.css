@@ -1,3 +1,33 @@
+/* Section Borders */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent-color-light);
+}
+
+body.dark-mode .section {
+    border-bottom: 3px solid var(--accent-color-dark);
+}
+
+/* Dashboard Charts */
+.dashboard-charts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.stat-list {
+    text-align: left;
+    font-size: 1rem;
+    color: var(--muted-text-light);
+}
+
+body.dark-mode .stat-list {
+    color: var(--muted-text-dark);
+}
+
 /* Color Palette */
 :root {
     /* Light Mode Colors */
