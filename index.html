@@ -38,9 +38,8 @@
     <section id="how-it-works" class="section">
         <div class="container">
             <h2>How Does a VPN Work?</h2>
-            <p>A VPN (Virtual Private Network) ensures your privacy and security by encrypting your data, masking your IP, and creating a secure tunnel.</p>
-            
-            <!-- VPN Diagram -->
+            <p>A VPN (Virtual Private Network) creates a secure and encrypted connection between your device and the internet. Here's how:</p>
+
             <div class="vpn-diagram">
                 <!-- Device -->
                 <div class="diagram-node" id="device">
@@ -49,29 +48,35 @@
                 </div>
 
                 <!-- Encrypted Tunnel -->
-                <div class="diagram-line">
-                    <div class="tunnel" id="tunnel1">
-                        <div class="data-packet" id="data-packet">🔒</div>
+                <div class="diagram-line tunnel-animation">
+                    <div class="tunnel">
+                        <p class="secure-label">Encrypted Tunnel</p>
                     </div>
-                    <p class="description">Encrypted Tunnel</p>
                 </div>
 
                 <!-- VPN Server -->
                 <div class="diagram-node" id="vpn-server">
-                    <div class="icon vpn-icon">🛡️</div>
+                    <div class="icon">🛡️</div>
                     <p>VPN Server</p>
+                    <div class="tooltip">
+                        <p>Chiffrement : OpenVPN, WireGuard, IKEv2</p>
+                    </div>
                 </div>
 
-                <!-- IP Address Masking -->
-                <div class="diagram-line">
-                    <div class="tunnel" id="tunnel2"></div>
-                    <p class="description">New IP Address</p>
+                <!-- Masquage IP -->
+                <div class="diagram-line tunnel-animation">
+                    <div class="tunnel">
+                        <p class="secure-label">New IP Address</p>
+                    </div>
                 </div>
 
                 <!-- Internet -->
                 <div class="diagram-node" id="internet">
                     <div class="icon">🌐</div>
                     <p>Internet</p>
+                    <div class="tooltip">
+                        <p>Your location is hidden!</p>
+                    </div>
                 </div>
             </div>
         </div>
