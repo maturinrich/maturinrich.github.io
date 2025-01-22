@@ -7,9 +7,9 @@ themeToggle.addEventListener('click', () => {
         : '🌙 Dark Mode';
 });
 
-// Pie Chart for VPN Usage
+// VPN Pie Chart
 const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
-const vpnPieChart = new Chart(pieCtx, {
+new Chart(pieCtx, {
     type: 'pie',
     data: {
         labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
@@ -28,17 +28,17 @@ const vpnPieChart = new Chart(pieCtx, {
     }
 });
 
-// Line Chart for VPN Market Growth
+// VPN Line Chart
 const lineCtx = document.getElementById('vpnLineChart').getContext('2d');
-const vpnLineChart = new Chart(lineCtx, {
+new Chart(lineCtx, {
     type: 'line',
     data: {
         labels: ['2020', '2021', '2022', '2023', '2024'],
         datasets: [{
-            label: 'VPN Market Growth (in Billion $)',
+            label: 'VPN Market Growth',
             data: [30, 35, 40, 44.6, 50],
             backgroundColor: 'rgba(59, 130, 246, 0.2)',
-            borderColor: 'rgba(59, 130, 246, 1)',
+            borderColor: '#3B82F6',
             borderWidth: 2
         }]
     },
