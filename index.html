@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN Insights - Optimized Dashboard</title>
+    <title>VPN Insights - Learn About VPNs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,6 +15,8 @@
             <div class="logo">VPN Insights</div>
             <nav>
                 <ul class="nav-links">
+                    <li><a href="#intro">Overview</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -23,6 +25,49 @@
             <button id="theme-toggle" class="btn-dark-mode">🌙 Dark Mode</button>
         </div>
     </header>
+
+    <!-- Intro Section -->
+    <section id="intro" class="section">
+        <div class="container">
+            <h1>VPN Insights Overview</h1>
+            <p>Explore the world of VPNs with real-time data and insights into the industry's growth, trends, and usage statistics.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2>How Does a VPN Work?</h2>
+            <div class="vpn-diagram">
+                <!-- Device -->
+                <div class="diagram-node" id="device">
+                    <div class="icon">📱</div>
+                    <p>Your Device</p>
+                </div>
+                <!-- Encrypted Tunnel -->
+                <div class="diagram-line">
+                    <div class="tunnel">
+                        <p class="secure-label">Encrypted Tunnel</p>
+                    </div>
+                </div>
+                <!-- VPN Server -->
+                <div class="diagram-node" id="vpn-server">
+                    <div class="icon">🛡️</div>
+                    <p>VPN Server</p>
+                </div>
+                <!-- Internet -->
+                <div class="diagram-line">
+                    <div class="tunnel">
+                        <p class="secure-label">Encrypted Tunnel</p>
+                    </div>
+                </div>
+                <div class="diagram-node" id="internet">
+                    <div class="icon">🌐</div>
+                    <p>Internet</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Dashboard Section -->
     <section id="dashboard" class="section">
@@ -61,6 +106,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is a VPN?</h3>
+                <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is VPN legal?</h3>
+                <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:support@vpninsights.com">support@vpninsights.com</a></p>
+            <p>Phone: +1 (800) 555-VPN</p>
         </div>
     </section>
 
