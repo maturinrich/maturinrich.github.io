@@ -7,6 +7,27 @@ themeToggle.addEventListener('click', () => {
         : '🌙 Dark Mode';
 });
 
+// Pie Chart for VPN Usage
+const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
+const vpnPieChart = new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
+        datasets: [{
+            data: [56, 35, 25, 20],
+            backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+
 // Line Chart for VPN Market Growth
 const lineCtx = document.getElementById('vpnLineChart').getContext('2d');
 const vpnLineChart = new Chart(lineCtx, {
@@ -31,27 +52,6 @@ const vpnLineChart = new Chart(lineCtx, {
         scales: {
             y: {
                 beginAtZero: true
-            }
-        }
-    }
-});
-
-// Pie Chart for VPN Usage
-const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
-const vpnPieChart = new Chart(pieCtx, {
-    type: 'pie',
-    data: {
-        labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
-        datasets: [{
-            data: [56, 35, 25, 20],
-            backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'bottom'
             }
         }
     }
