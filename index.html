@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN Insights - Discover VPN</title>
+    <title>VPN Insights - Learn About VPNs</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,44 +14,65 @@
             <div class="logo">VPN Insights</div>
             <nav>
                 <ul class="nav-links">
+                    <li><a href="#intro">What is VPN?</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#why-vpn">Why Choose a VPN?</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <button id="toggle-dark-mode" class="btn-dark-mode">🌙 Dark Mode</button>
+            <button id="theme-toggle" class="btn-dark-mode">🌙 Dark Mode</button>
         </div>
     </header>
 
-    <!-- Section: How It Works -->
+    <!-- Intro Section -->
+    <section id="intro" class="section">
+        <div class="container">
+            <h1>What is a VPN?</h1>
+            <p>A VPN (Virtual Private Network) is a tool that encrypts your internet connection to ensure your privacy and security while accessing the web.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <h2>Features of a VPN</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/privacy.png" alt="Privacy">
+                    <h3>Privacy</h3>
+                    <p>Maintain your online anonymity and secure your sensitive data.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/security.png" alt="Security">
+                    <h3>Security</h3>
+                    <p>Protect your information on public Wi-Fi networks.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/access.png" alt="Global Access">
+                    <h3>Global Access</h3>
+                    <p>Enjoy unrestricted access to content worldwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
     <section id="how-it-works" class="section">
         <div class="container">
-            <h2>How It Works</h2>
-            <p>Our VPN creates a secure, encrypted tunnel between your device and the internet, protecting your data from hackers and trackers.</p>
-            <img src="images/vpn-diagram.png" alt="VPN Diagram" class="image-center">
+            <h2>How Does a VPN Work?</h2>
+            <p>A VPN creates an encrypted tunnel between your device and the internet, hiding your IP address and securing your data.</p>
+            <img src="images/vpn-diagram.png" alt="VPN Diagram">
         </div>
     </section>
 
-    <!-- Section: Why Choose a VPN -->
-    <section id="why-vpn" class="section">
-        <div class="container">
-            <h2>Why Choose a VPN?</h2>
-            <ul>
-                <li><strong>Privacy:</strong> Maintain your online anonymity and secure your sensitive data.</li>
-                <li><strong>Security:</strong> Safeguard your information on public Wi-Fi networks.</li>
-                <li><strong>Access:</strong> Enjoy unrestricted access to global content without limits.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Section: FAQ -->
+    <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-item">
                 <h3>What is a VPN?</h3>
-                <p>A VPN encrypts your connection to ensure privacy and security online.</p>
+                <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
             </div>
             <div class="faq-item">
                 <h3>Is VPN legal?</h3>
@@ -60,7 +81,7 @@
         </div>
     </section>
 
-    <!-- Section: Contact -->
+    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact Us</h2>
@@ -72,7 +93,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 VPN Insights. All Rights Reserved.</p>
+            <p>&copy; 2025 VPN Insights. All rights reserved.</p>
         </div>
     </footer>
 
