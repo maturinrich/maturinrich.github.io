@@ -1,3 +1,20 @@
+// Step Animation Sequence
+const startAnimation = () => {
+    const steps = document.querySelectorAll('.diagram-node, .tunnel, .step-description');
+    let delay = 0;
+
+    steps.forEach((step, index) => {
+        setTimeout(() => {
+            step.classList.add('active');
+        }, delay);
+        delay += 1000; // Delay between each step
+    });
+};
+
+// Add Event Listener to Start Button
+const startButton = document.getElementById('start-animation');
+startButton.addEventListener('click', startAnimation);
+
 // Toggle Dark Mode
 const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
