@@ -7,7 +7,18 @@ themeToggle.addEventListener('click', () => {
         : '🌙 Dark Mode';
 });
 
-// VPN Pie Chart
+// Data Packet Interaction with VPN Server
+const dataPacket = document.getElementById('data-packet');
+const vpnServer = document.querySelector('.vpn-icon');
+
+dataPacket.addEventListener('animationiteration', () => {
+    vpnServer.style.backgroundColor = '#48BB78'; // Turn VPN Server green
+    setTimeout(() => {
+        vpnServer.style.backgroundColor = '#F56565'; // Reset back to red
+    }, 1500);
+});
+
+// Pie Chart for Dashboard
 const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
 new Chart(pieCtx, {
     type: 'pie',
@@ -17,18 +28,10 @@ new Chart(pieCtx, {
             data: [56, 35, 25, 20],
             backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
         }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'bottom'
-            }
-        }
     }
 });
 
-// VPN Line Chart
+// Line Chart for Dashboard
 const lineCtx = document.getElementById('vpnLineChart').getContext('2d');
 new Chart(lineCtx, {
     type: 'line',
@@ -44,26 +47,8 @@ new Chart(lineCtx, {
     },
     options: {
         responsive: true,
-        plugins: {
-            legend: {
-                position: 'top'
-            }
-        },
         scales: {
-            y: {
-                beginAtZero: true
-            }
+            y: { beginAtZero: true }
         }
     }
-});
-
-// Envelope Animation Interaction
-const envelope = document.getElementById('envelope');
-const vpnServer = document.querySelector('.vpn-icon');
-
-envelope.addEventListener('animationiteration', () => {
-    vpnServer.style.backgroundColor = '#48BB78'; // Turn VPN green
-    setTimeout(() => {
-        vpnServer.style.backgroundColor = '#F56565'; // Reset back to red
-    }, 1500);
 });
