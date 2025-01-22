@@ -1,117 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How VPN Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">VPN Insights</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#intro">Overview</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#dashboard">Dashboard</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="btn-dark-mode">🌙 Dark Mode</button>
-        </div>
-    </header>
+<section id="how-it-works" class="section">
+    <div class="container">
+        <h2>How Does a VPN Work?</h2>
+        <p>A VPN (Virtual Private Network) ensures your privacy and security by encrypting your data, masking your IP, and creating a secure tunnel.</p>
+        
+        <!-- VPN Diagram -->
+        <div class="vpn-diagram">
+            <!-- Device -->
+            <div class="diagram-node" id="device">
+                <div class="icon">📱</div>
+                <p>Your Device</p>
+            </div>
 
-    <!-- Intro Section -->
-    <section id="intro" class="section">
-        <div class="container">
-            <h1>How Does a VPN Work?</h1>
-            <p>Discover how a VPN secures your connection, encrypts your data, and protects your identity online.</p>
-        </div>
-    </section>
+            <!-- Encrypted Tunnel -->
+            <div class="diagram-line">
+                <div class="tunnel" id="tunnel1">
+                    <div class="data-packet" id="data-packet">🔒</div>
+                </div>
+                <p class="description">Encrypted Tunnel</p>
+            </div>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <h2>How Does a VPN Work?</h2>
-            <div class="vpn-diagram">
-                <!-- Device -->
-                <div class="diagram-node" id="device">
-                    <div class="icon">📱</div>
-                    <p>Your Device</p>
-                </div>
-                <!-- Encrypted Tunnel -->
-                <div class="diagram-line">
-                    <div class="tunnel" id="tunnel1">
-                        <div class="data-packet" id="data-packet">🔒</div>
-                    </div>
-                    <p class="description">Encrypted Tunnel</p>
-                </div>
-                <!-- VPN Server -->
-                <div class="diagram-node" id="vpn-server">
-                    <div class="icon vpn-icon">🛡️</div>
-                    <p>VPN Server</p>
-                </div>
-                <!-- IP Address Masking -->
-                <div class="diagram-line">
-                    <div class="tunnel" id="tunnel2"></div>
-                    <p class="description">New IP Address</p>
-                </div>
-                <!-- Internet -->
-                <div class="diagram-node" id="internet">
-                    <div class="icon">🌐</div>
-                    <p>Internet</p>
-                </div>
+            <!-- VPN Server -->
+            <div class="diagram-node" id="vpn-server">
+                <div class="icon vpn-icon">🛡️</div>
+                <p>VPN Server</p>
+            </div>
+
+            <!-- IP Address Masking -->
+            <div class="diagram-line">
+                <div class="tunnel" id="tunnel2"></div>
+                <p class="description">New IP Address</p>
+            </div>
+
+            <!-- Internet -->
+            <div class="diagram-node" id="internet">
+                <div class="icon">🌐</div>
+                <p>Internet</p>
             </div>
         </div>
-    </section>
-
-    <!-- Dashboard Section -->
-    <section id="dashboard" class="section">
-        <div class="container">
-            <h2>VPN Usage Dashboard</h2>
-            <p>A comprehensive view of VPN usage and market trends.</p>
-
-            <div class="dashboard-grid">
-                <!-- Pie Chart -->
-                <div class="chart-container pie-chart">
-                    <canvas id="vpnPieChart"></canvas>
-                </div>
-
-                <!-- Line Chart -->
-                <div class="chart-container line-chart">
-                    <canvas id="vpnLineChart"></canvas>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>What is a VPN?</h3>
-                <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is VPN legal?</h3>
-                <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 VPN Insights. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="scripts.js"></script>
-</body>
-</html>
+    </div>
+</section>
