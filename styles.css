@@ -1,13 +1,12 @@
-/* Palette de couleurs */
+/* Définition de la palette */
 :root {
-    --light-blue: #DBE9F9;
-    --soft-blue: #B9D4F3;
-    --medium-blue: #75AAE7;
-    --vivid-blue: #3982DC;
-    --dark-blue: #1F5CAB;
-    --text-color: #333;
-    --white: #ffffff;
-    --button-hover: #164A7E;
+    --color-light: #DBE9F9;   /* Couleur très claire */
+    --color-soft: #B9D4F3;   /* Couleur douce */
+    --color-medium: #75AAE7; /* Couleur intermédiaire */
+    --color-vivid: #3982DC;  /* Couleur vive */
+    --color-dark: #1F5CAB;   /* Couleur foncée */
+    --text-color: #333333;   /* Couleur du texte */
+    --white: #ffffff;        /* Blanc */
 }
 
 /* Reset général */
@@ -20,25 +19,25 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-color: var(--color-light); /* Couleur principale */
     color: var(--text-color);
-    background-color: var(--light-blue);
-    scroll-behavior: smooth;
 }
 
-/* Container général */
+/* Conteneur principal */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Navigation Bar */
+/* Navigation */
 .navbar {
+    background-color: var(--color-vivid); /* Arrière-plan intense */
+    color: var(--white);
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--vivid-blue);
-    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -59,27 +58,19 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--soft-blue);
+    color: var(--color-soft); /* Couleur douce pour le survol */
 }
 
-.right-elements .btn-signup {
-    background-color: var(--medium-blue);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.right-elements {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.right-elements .btn-signup:hover {
-    background-color: var(--button-hover);
-}
-
+/* Barre de recherche */
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
     background-color: var(--white);
     padding: 5px 15px;
     border-radius: 25px;
@@ -90,28 +81,26 @@ body {
     border: none;
     outline: none;
     font-size: 1rem;
-    color: var(--text-color);
-    background-color: transparent;
     flex: 1;
 }
 
 .search-bar button {
-    background-color: var(--vivid-blue);
+    background-color: var(--color-medium); /* Couleur bouton */
     color: var(--white);
     border: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--color-dark); /* Couleur sombre au survol */
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg'); /* Remplace avec ton image */
+    background-image: url('hero-image.jpg'); /* Image à remplacer */
     background-size: cover;
     background-position: center;
     color: var(--white);
@@ -120,17 +109,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
     border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
@@ -140,7 +128,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--medium-blue);
+    background-color: var(--color-medium);
     color: var(--white);
     padding: 12px 30px;
     border-radius: 30px;
@@ -150,35 +138,34 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--button-hover);
+    background-color: var(--color-dark); /* Plus sombre au survol */
     transform: translateY(-3px);
 }
 
-/* About Section */
+/* Section "À propos" */
 .about-section {
     background-color: var(--white);
-    color: var(--text-color);
     padding: 60px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-section h2 {
     font-size: 2.5rem;
-    color: var(--vivid-blue);
+    color: var(--color-dark);
     margin-bottom: 20px;
 }
 
 .about-section p {
     font-size: 1.2rem;
     color: var(--text-color);
-    margin-bottom: 30px;
+    line-height: 1.8;
 }
 
 /* Features Section */
 .features-section {
-    background-color: var(--soft-blue);
+    background-color: var(--color-soft);
     padding: 60px 20px;
     text-align: center;
     border-radius: 15px;
@@ -186,7 +173,7 @@ body {
 
 .features-section h2 {
     font-size: 2.5rem;
-    color: var(--dark-blue);
+    color: var(--color-dark);
     margin-bottom: 30px;
 }
 
@@ -219,9 +206,9 @@ body {
 
 /* Footer */
 .footer {
-    background-color: var(--dark-blue);
+    background-color: var(--color-dark);
     color: var(--white);
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -237,5 +224,5 @@ body {
 }
 
 .footer a:hover {
-    color: var(--soft-blue);
+    color: var(--color-soft); /* Couleur douce */
 }
