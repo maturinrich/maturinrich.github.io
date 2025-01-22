@@ -45,11 +45,12 @@
                 <div class="diagram-node" id="device">
                     <div class="icon">📱</div>
                     <p>Your Device</p>
+                    <div class="step-description">1. Your device sends data.</div>
                 </div>
 
                 <!-- Encrypted Tunnel -->
-                <div class="diagram-line tunnel-animation">
-                    <div class="tunnel">
+                <div class="diagram-line">
+                    <div class="tunnel step-2">
                         <p class="secure-label">Encrypted Tunnel</p>
                     </div>
                 </div>
@@ -59,13 +60,13 @@
                     <div class="icon">🛡️</div>
                     <p>VPN Server</p>
                     <div class="tooltip">
-                        <p>Chiffrement : OpenVPN, WireGuard, IKEv2</p>
+                        <p>2. Data is encrypted and passed to the server.</p>
                     </div>
                 </div>
 
-                <!-- Masquage IP -->
-                <div class="diagram-line tunnel-animation">
-                    <div class="tunnel">
+                <!-- New IP Address -->
+                <div class="diagram-line">
+                    <div class="tunnel step-3">
                         <p class="secure-label">New IP Address</p>
                     </div>
                 </div>
@@ -74,11 +75,11 @@
                 <div class="diagram-node" id="internet">
                     <div class="icon">🌐</div>
                     <p>Internet</p>
-                    <div class="tooltip">
-                        <p>Your location is hidden!</p>
-                    </div>
+                    <div class="step-description">3. Data continues securely on the Internet.</div>
                 </div>
             </div>
+
+            <button id="start-animation" class="btn-primary">Start Animation</button>
         </div>
     </section>
 
