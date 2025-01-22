@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPN Insights - Learn About VPNs</title>
+    <title>VPN Insights - Dashboard</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -15,9 +15,7 @@
             <div class="logo">VPN Insights</div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#intro">What is VPN?</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#intro">Overview</a></li>
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -30,79 +28,46 @@
     <!-- Intro Section -->
     <section id="intro" class="section">
         <div class="container">
-            <h1>What is a VPN?</h1>
-            <p>A VPN (Virtual Private Network) is a tool that encrypts your internet connection to ensure your privacy and security while accessing the web.</p>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="section">
-        <div class="container">
-            <h2>Features of a VPN</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <img src="images/privacy.png" alt="Privacy">
-                    <h3>Privacy</h3>
-                    <p>Maintain your online anonymity and secure your sensitive data.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="images/security.png" alt="Security">
-                    <h3>Security</h3>
-                    <p>Protect your information on public Wi-Fi networks.</p>
-                </div>
-                <div class="feature-card">
-                    <img src="images/access.png" alt="Global Access">
-                    <h3>Global Access</h3>
-                    <p>Enjoy unrestricted access to content worldwide.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <h2>How Does a VPN Work?</h2>
-            <p>A VPN creates a secure, encrypted tunnel between your device and the internet, protecting your online activity from threats.</p>
-
-            <!-- VPN Diagram -->
-            <div class="diagram">
-                <div class="device">
-                    <div class="icon">📱</div>
-                    <p>Your Device</p>
-                </div>
-                <div class="tunnel">
-                    <div class="line"></div>
-                    <p class="secure-label">Encrypted Tunnel</p>
-                </div>
-                <div class="vpn-server">
-                    <div class="icon">🛡️</div>
-                    <p>VPN Server</p>
-                </div>
-                <div class="internet">
-                    <div class="icon">🌐</div>
-                    <p>Internet</p>
-                </div>
-            </div>
+            <h1>VPN Insights Overview</h1>
+            <p>Explore the world of VPNs with real-time data and insights into the industry's growth, trends, and usage statistics.</p>
         </div>
     </section>
 
     <!-- Dashboard Section -->
     <section id="dashboard" class="section">
         <div class="container">
-            <h2>Dashboard: VPN Usage Statistics</h2>
-            <p>Explore the global VPN market trends and usage statistics from trusted sources.</p>
-            <div class="dashboard-charts">
-                <!-- Pie Chart -->
-                <canvas id="vpnPieChart"></canvas>
-                <!-- Additional Statistics -->
-                <div class="stat-list">
-                    <p><strong>25%</strong> of internet users worldwide use a VPN.</p>
-                    <p><strong>56%</strong> use VPNs to access entertainment platforms.</p>
-                    <p><strong>35%</strong> prioritize anonymity when using VPNs.</p>
+            <h2>VPN Usage Dashboard</h2>
+            <p>A comprehensive view of VPN usage and market trends.</p>
+            
+            <!-- Line Chart -->
+            <div class="chart-container">
+                <canvas id="vpnLineChart"></canvas>
+            </div>
+
+            <!-- Indicators -->
+            <div class="indicators">
+                <div class="indicator">
+                    <h3>Global Revenue</h3>
+                    <p><strong>$44.6B</strong> <span class="positive">+10%</span></p>
+                </div>
+                <div class="indicator">
+                    <h3>VPN Users</h3>
+                    <p><strong>700M</strong> <span class="neutral">+2%</span></p>
+                </div>
+                <div class="indicator">
+                    <h3>Market Growth</h3>
+                    <p><strong>13.3%</strong> <span class="positive">+0.5%</span></p>
+                </div>
+                <div class="indicator">
+                    <h3>Security Breaches Avoided</h3>
+                    <p><strong>4.2M</strong> <span class="positive">+15%</span></p>
                 </div>
             </div>
-            <p class="source">Source: <a href="https://www.websiterating.com/" target="_blank">WebsiteRating</a></p>
+
+            <!-- Pie Chart -->
+            <div class="chart-container">
+                <canvas id="vpnPieChart"></canvas>
+            </div>
         </div>
     </section>
 
