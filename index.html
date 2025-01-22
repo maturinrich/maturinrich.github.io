@@ -46,21 +46,20 @@
                 </div>
                 <!-- Encrypted Tunnel -->
                 <div class="diagram-line">
-                    <div class="tunnel">
-                        <p class="secure-label">Encrypted Tunnel</p>
+                    <div class="tunnel" id="tunnel1">
+                        <div class="envelope" id="envelope"></div>
                     </div>
                 </div>
                 <!-- VPN Server -->
                 <div class="diagram-node" id="vpn-server">
-                    <div class="icon">🛡️</div>
+                    <div class="icon vpn-icon">🛡️</div>
                     <p>VPN Server</p>
                 </div>
-                <!-- Internet -->
+                <!-- Encrypted Tunnel -->
                 <div class="diagram-line">
-                    <div class="tunnel">
-                        <p class="secure-label">Encrypted Tunnel</p>
-                    </div>
+                    <div class="tunnel" id="tunnel2"></div>
                 </div>
+                <!-- Internet -->
                 <div class="diagram-node" id="internet">
                     <div class="icon">🌐</div>
                     <p>Internet</p>
