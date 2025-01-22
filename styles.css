@@ -1,4 +1,4 @@
-/* Color Palette */
+/* Palette de couleurs */
 :root {
     --dark: #0F172A;
     --medium-dark: #1F2937;
@@ -17,9 +17,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--text-light);
     background-color: var(--dark);
+    color: var(--text-light);
+    line-height: 1.6;
 }
 
 /* Navigation */
@@ -27,8 +27,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
     background-color: var(--medium-dark);
+    padding: 20px 40px;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -43,6 +43,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: var(--text-light);
+    font-weight: bold;
     transition: color 0.3s;
 }
 
@@ -50,69 +51,79 @@ body {
     color: var(--light-blue);
 }
 
-/* Hero Section */
-.hero {
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--dark), var(--medium-dark));
+.btn-dark-mode {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--bright-blue);
     color: var(--text-light);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
+.btn-dark-mode:hover {
+    background-color: var(--light-blue);
 }
 
-.hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-}
-
-/* About Section */
-.about-section {
+/* Sections */
+.section {
     padding: 60px 20px;
     text-align: center;
-    background-color: var(--medium-dark);
 }
 
-.about-section h2 {
-    color: var(--light-blue);
+.section h2 {
     margin-bottom: 20px;
+    color: var(--bright-blue);
 }
 
-/* Features Section */
-.features-section {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: var(--dark);
+.image-center {
+    max-width: 80%;
+    margin: 20px auto;
+    display: block;
 }
 
-.features-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.feature-card {
-    background-color: var(--medium-dark);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+ul {
+    text-align: left;
+    margin: 20px auto;
+    list-style-type: square;
     color: var(--text-light);
+    max-width: 800px;
 }
 
-.feature-card img {
-    max-width: 80px;
-    margin-bottom: 15px;
+/* FAQ */
+.faq-item {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.faq-item h3 {
+    color: var(--light-blue);
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
-    background-color: var(--medium-dark);
     text-align: center;
     padding: 20px;
+    background-color: var(--medium-dark);
     color: var(--text-muted);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1E293B;
+    color: #E5E7EB;
+}
+
+.dark-mode .navbar {
+    background-color: #374151;
+}
+
+.dark-mode .btn-dark-mode {
+    background-color: #64748B;
+}
+
+.dark-mode footer {
+    background-color: #374151;
 }
