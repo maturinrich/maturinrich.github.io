@@ -1,9 +1,9 @@
 // Step Animation Sequence
 const startAnimation = () => {
-    const steps = document.querySelectorAll('.diagram-node, .tunnel, .step-description');
+    const steps = document.querySelectorAll('.diagram-node, .tunnel');
     let delay = 0;
 
-    steps.forEach((step, index) => {
+    steps.forEach((step) => {
         setTimeout(() => {
             step.classList.add('active');
         }, delay);
