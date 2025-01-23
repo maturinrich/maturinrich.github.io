@@ -1,13 +1,13 @@
 // Step Animation Sequence
 const startAnimation = () => {
-    const steps = document.querySelectorAll('.diagram-node, .tunnel');
+    const steps = document.querySelectorAll('.diagram-node, .tunnel, .secure-label');
     let delay = 0;
 
     steps.forEach((step) => {
         setTimeout(() => {
             step.classList.add('active');
         }, delay);
-        delay += 1000; // Delay between each step
+        delay += 500; // Delay between each step
     });
 };
 
