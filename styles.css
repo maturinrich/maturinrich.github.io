@@ -1,194 +1,39 @@
-/* Root Variables for Colors */
-:root {
-    --bg-light: #F9FAFB;
-    --bg-dark: #1E293B;
-    --text-light: #111827;
-    --text-dark: #F9FAFB;
-    --accent-light: #3B82F6;
-    --accent-dark: #63B3ED;
-    --card-bg-light: #FFFFFF;
-    --card-bg-dark: #2D3748;
-    --positive: #48BB78;
-    --neutral: #ECC94B;
-    --negative: #F56565;
-}
+// Step Animation Sequence
+const startAnimation = () => {
+    const steps = document.querySelectorAll('.diagram-node, .tunnel, .step-description');
+    let delay = 0;
 
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: all 0.3s ease;
-}
+    steps.forEach((step, index) => {
+        setTimeout(() => {
+            step.classList.add('active');
+        }, delay);
+        delay += 1000; // Delay between each step
+    });
+};
 
-body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-}
+// Add Event Listener to Start Button
+const startButton = document.getElementById('start-animation');
+startButton.addEventListener('click', startAnimation);
 
-h1, h2, h3 {
-    color: var(--accent-light);
-}
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+});
 
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: var(--accent-dark);
-}
-
-/* Section Styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: var(--card-bg-light);
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .navbar {
-    background-color: var(--card-bg-dark);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-light);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode .nav-links a {
-    color: var(--text-dark);
-}
-
-.nav-links a:hover {
-    color: var(--accent-light);
-}
-
-/* Toggle Button */
-.btn-dark-mode {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--accent-light);
-    color: var(--card-bg-light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .btn-dark-mode {
-    background-color: var(--accent-dark);
-    color: var(--text-dark);
-}
-
-/* VPN Diagram */
-.vpn-diagram {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 40px auto;
-    text-align: center;
-    max-width: 1000px;
-    gap: 20px;
-}
-
-/* Hidden Elements for Animation */
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-/* Visible Elements for Animation */
-.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Nodes and Tunnels */
-.diagram-node {
-    text-align: center;
-    flex: 1;
-}
-
-.diagram-line {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.tunnel {
-    width: 150px;
-    height: 10px;
-    background: linear-gradient(90deg, #63B3ED, #3B82F6);
-    border-radius: 5px;
-    position: relative;
-}
-
-/* Icons and Text */
-.icon {
-    font-size: 2rem;
-    background-color: var(--accent-light);
-    padding: 20px;
-    border-radius: 50%;
-    color: var(--card-bg-light);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark-mode .icon {
-    background-color: var(--accent-dark);
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Secure Labels */
-.secure-label {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    color: var(--text-light);
-}
-
-body.dark-mode .secure-label {
-    color: var(--text-dark);
-}
-
-/* Stylish Button */
-.btn-primary {
-    padding: 15px 25px;
-    background-color: #3B82F6;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    margin-top: 30px;
-}
-
-.btn-primary:hover {
-    background-color: #2563EB;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+// VPN Pie Chart
+const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
+new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
+        datasets: [{
+            data: [56, 35, 25, 20],
+            backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
+        }]
+    },
+    options: {
+        responsive
