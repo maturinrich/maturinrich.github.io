@@ -1,4 +1,4 @@
-/* Root Variables */
+/* Root Variables for Colors */
 :root {
     --bg-light: #F9FAFB;
     --bg-dark: #1E293B;
@@ -13,7 +13,7 @@
     --negative: #F56565;
 }
 
-/* Global Styles */
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -35,13 +35,13 @@ body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
     color: var(--accent-dark);
 }
 
-/* Section */
+/* Section Styles */
 .section {
     padding: 60px 20px;
     text-align: center;
 }
 
-/* Navbar */
+/* Navigation Bar */
 .navbar {
     background-color: var(--card-bg-light);
     padding: 20px;
@@ -80,35 +80,54 @@ body.dark-mode .nav-links a {
     color: var(--accent-light);
 }
 
-/* Theme Toggle */
-.theme-switch__container {
-    cursor: pointer;
-    width: 50px;
-    height: 25px;
-    background-color: var(--accent-light);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    position: relative;
-    transition: background-color 0.3s ease;
+/* Theme Switch Styles */
+.theme-switch {
+    --toggle-size: 30px;
+    --container-width: 5.625em;
+    --container-height: 2.5em;
+    --container-radius: 6.25em;
+    --container-light-bg: #3D7EAE;
+    --container-night-bg: #1D1F2C;
+    --circle-container-diameter: 3.375em;
+    --sun-moon-diameter: 2.125em;
+    --sun-bg: #ECCA2F;
+    --moon-bg: #C4C9D1;
+    --spot-color: #959DB1;
+    --transition: 0.5s cubic-bezier(0, -0.02, 0.4, 1.25);
 }
 
-body.dark-mode .theme-switch__container {
-    background-color: var(--accent-dark);
+.theme-switch__container {
+    width: var(--container-width);
+    height: var(--container-height);
+    background-color: var(--container-light-bg);
+    border-radius: var(--container-radius);
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-switch__checkbox {
+    display: none;
+}
+
+.theme-switch__checkbox:checked + .theme-switch__container {
+    background-color: var(--container-night-bg);
 }
 
 .theme-switch__circle-container {
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
+    width: var(--circle-container-diameter);
+    height: var(--circle-container-diameter);
+    position: absolute;
+    left: calc((var(--circle-container-diameter) - var(--container-height)) / -2);
+    top: calc((var(--circle-container-diameter) - var(--container-height)) / -2);
+    background-color: var(--sun-bg);
     border-radius: 50%;
-    transition: transform 0.3s ease;
-    transform: translateX(0);
+    transition: var(--transition);
 }
 
-body.dark-mode .theme-switch__circle-container {
-    transform: translateX(25px);
+.theme-switch__checkbox:checked + .theme-switch__container .theme-switch__circle-container {
+    background-color: var(--moon-bg);
+    left: calc(100% - ((var(--circle-container-diameter) - var(--container-height)) / -2) - var(--circle-container-diameter));
 }
 
 /* VPN Diagram */
@@ -116,18 +135,15 @@ body.dark-mode .theme-switch__circle-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 40px;
-    flex-wrap: nowrap;
-    padding: 20px;
     text-align: center;
 }
 
-/* Diagram Node */
 .diagram-node {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
@@ -138,7 +154,6 @@ body.dark-mode .theme-switch__circle-container {
     transform: translateY(0);
 }
 
-/* Icon */
 .icon {
     font-size: 2rem;
     background-color: var(--accent-light);
@@ -149,22 +164,16 @@ body.dark-mode .theme-switch__circle-container {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body.dark-mode .icon {
-    background-color: var(--accent-dark);
-}
-
 .icon:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Tunnel */
 .tunnel {
     width: 200px;
     height: 10px;
     background: linear-gradient(90deg, #63B3ED, #3B82F6);
     border-radius: 5px;
-    animation: flow 3s infinite alternate;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease-in-out;
@@ -175,47 +184,24 @@ body.dark-mode .icon {
     transform: translateY(0);
 }
 
-@keyframes flow {
-    0% {
-        background-position: 0;
-    }
-    100% {
-        background-position: 200px;
-    }
-}
-
-/* Step Description */
-.step-description {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-.step-description.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Start Animation Button */
-.btn-primary {
-    background-color: var(--accent-light);
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+/* Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: start;
     margin-top: 20px;
-    display: inline-block;
 }
 
-.btn-primary:hover {
-    background-color: var(--accent-dark);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+.chart-container {
+    background-color: var(--card-bg-light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stats-container {
+    display: grid;
+    gap: 20px;
 }
