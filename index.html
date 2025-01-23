@@ -42,35 +42,37 @@
 
             <div class="vpn-diagram">
                 <!-- Device -->
-                <div class="diagram-node hidden">
+                <div class="diagram-node" id="device">
                     <div class="icon">📱</div>
                     <p>Your Device</p>
                     <div class="step-description">1. Your device sends data.</div>
                 </div>
 
                 <!-- Encrypted Tunnel -->
-                <div class="diagram-line hidden">
-                    <div class="tunnel"></div>
-                    <p class="secure-label">Encrypted Tunnel</p>
+                <div class="diagram-line">
+                    <div class="tunnel step-2">
+                        <p class="secure-label">Encrypted Tunnel</p>
+                    </div>
                 </div>
 
                 <!-- VPN Server -->
-                <div class="diagram-node hidden">
+                <div class="diagram-node" id="vpn-server">
                     <div class="icon">🛡️</div>
                     <p>VPN Server</p>
                     <div class="tooltip">
-                        <p>2. Data is encrypted and passes through the server.</p>
+                        <p>2. Data is encrypted and passed to the server.</p>
                     </div>
                 </div>
 
                 <!-- New IP Address -->
-                <div class="diagram-line hidden">
-                    <div class="tunnel"></div>
-                    <p class="secure-label">New IP Address</p>
+                <div class="diagram-line">
+                    <div class="tunnel step-3">
+                        <p class="secure-label">New IP Address</p>
+                    </div>
                 </div>
 
                 <!-- Internet -->
-                <div class="diagram-node hidden">
+                <div class="diagram-node" id="internet">
                     <div class="icon">🌐</div>
                     <p>Internet</p>
                     <div class="step-description">3. Data continues securely on the Internet.</div>
