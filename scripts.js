@@ -1,26 +1,11 @@
-// Theme Switch Toggle
-const themeCheckbox = document.querySelector('.theme-switch__checkbox');
-
-themeCheckbox.addEventListener('change', () => {
+// Toggle Dark Mode
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
 });
-
-// VPN Diagram Animation
-const startAnimation = () => {
-    const steps = document.querySelectorAll('.diagram-node, .tunnel');
-    let delay = 0;
-
-    steps.forEach((step) => {
-        setTimeout(() => {
-            step.classList.add('active');
-        }, delay);
-        delay += 1000; // Delay between each step
-    });
-};
-
-// Add Event Listener for Animation Button
-const startButton = document.getElementById('start-animation');
-startButton.addEventListener('click', startAnimation);
 
 // VPN Pie Chart
 const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
