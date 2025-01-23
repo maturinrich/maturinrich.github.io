@@ -42,7 +42,7 @@
 
             <div class="vpn-diagram">
                 <!-- Device -->
-                <div class="diagram-node" id="device">
+                <div class="diagram-node">
                     <div class="icon">📱</div>
                     <p>Your Device</p>
                     <div class="step-description">1. Your device sends data.</div>
@@ -50,31 +50,27 @@
 
                 <!-- Encrypted Tunnel -->
                 <div class="diagram-line">
-                    <div class="tunnel step-2">
-                        <div class="data-flow">D</div>
-                        <p class="secure-label">Encrypted Tunnel</p>
-                    </div>
+                    <div class="tunnel"></div>
+                    <p class="secure-label">Encrypted Tunnel</p>
                 </div>
 
                 <!-- VPN Server -->
-                <div class="diagram-node" id="vpn-server">
+                <div class="diagram-node">
                     <div class="icon">🛡️</div>
                     <p>VPN Server</p>
                     <div class="tooltip">
-                        <p>2. Data is encrypted and passed to the server.</p>
+                        <p>2. Data is encrypted and passes through the server.</p>
                     </div>
                 </div>
 
                 <!-- New IP Address -->
                 <div class="diagram-line">
-                    <div class="tunnel step-3">
-                        <div class="data-flow">D</div>
-                        <p class="secure-label">New IP Address</p>
-                    </div>
+                    <div class="tunnel"></div>
+                    <p class="secure-label">New IP Address</p>
                 </div>
 
                 <!-- Internet -->
-                <div class="diagram-node" id="internet">
+                <div class="diagram-node">
                     <div class="icon">🌐</div>
                     <p>Internet</p>
                     <div class="step-description">3. Data continues securely on the Internet.</div>
@@ -122,6 +118,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is a VPN?</h3>
+                <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is VPN legal?</h3>
+                <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:support@vpninsights.com">support@vpninsights.com</a></p>
+            <p>Phone: +1 (800) 555-VPN</p>
         </div>
     </section>
 
