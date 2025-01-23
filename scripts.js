@@ -1,13 +1,14 @@
 // Step Animation Sequence
 const startAnimation = () => {
-    const steps = document.querySelectorAll('.diagram-node, .tunnel, .secure-label');
+    const steps = document.querySelectorAll('.vpn-diagram .hidden'); // Select only hidden elements
     let delay = 0;
 
     steps.forEach((step) => {
         setTimeout(() => {
-            step.classList.add('active');
+            step.classList.remove('hidden');
+            step.classList.add('active'); // Show the step
         }, delay);
-        delay += 500; // Delay between each step
+        delay += 1000; // Delay of 1 second between each step
     });
 };
 
