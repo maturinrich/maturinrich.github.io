@@ -1,238 +1,75 @@
-/* Root Variables for Colors */
-:root {
-    --bg-light: #F9FAFB;
-    --bg-dark: #1E293B;
-    --text-light: #111827;
-    --text-dark: #F9FAFB;
-    --accent-light: #3B82F6;
-    --accent-dark: #63B3ED;
-    --card-bg-light: #FFFFFF;
-    --card-bg-dark: #2D3748;
-    --positive: #48BB78;
-    --neutral: #ECC94B;
-    --negative: #F56565;
-}
+// Toggle Dark Mode
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggle.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+});
 
-/* General Styles */
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: all 0.3s ease;
-}
+// Step Animation Sequence
+const startAnimation = () => {
+    const steps = document.querySelectorAll('.diagram-node, .tunnel, .step-description');
+    let delay = 0;
 
-body.dark-mode {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-}
+    steps.forEach((step, index) => {
+        setTimeout(() => {
+            step.classList.add('active');
+        }, delay);
+        delay += 1000; // Delay between each step
+    });
+};
 
-h1, h2, h3 {
-    color: var(--accent-light);
-}
+// Add Event Listener to Start Button
+const startButton = document.getElementById('start-animation');
+startButton.addEventListener('click', startAnimation);
 
-body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-    color: var(--accent-dark);
-}
-
-/* Section Styles */
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* Navigation Bar */
-.navbar {
-    background-color: var(--card-bg-light);
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .navbar {
-    background-color: var(--card-bg-dark);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-light);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-body.dark-mode .nav-links a {
-    color: var(--text-dark);
-}
-
-.nav-links a:hover {
-    color: var(--accent-light);
-}
-
-/* Toggle Button */
-.btn-dark-mode {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--accent-light);
-    color: var(--card-bg-light);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-body.dark-mode .btn-dark-mode {
-    background-color: var(--accent-dark);
-    color: var(--text-dark);
-}
-
-/* Diagram Styles */
-.vpn-diagram {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 20px;
-}
-
-/* Diagram Node */
-.diagram-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-.diagram-node.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Icon Styling */
-.icon {
-    font-size: 2rem;
-    background-color: var(--accent-light);
-    padding: 20px;
-    border-radius: 50%;
-    color: var(--card-bg-light);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark-mode .icon {
-    background-color: var(--accent-dark);
-}
-
-.icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Encrypted Tunnel */
-.tunnel {
-    width: 200px;
-    height: 10px;
-    background: linear-gradient(90deg, #63B3ED, #3B82F6);
-    position: relative;
-    border-radius: 5px;
-    animation: flow 3s infinite alternate;
-    opacity: 0; /* Hidden by default */
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-.tunnel.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes flow {
-    0% {
-        background-position: 0;
+// VPN Pie Chart
+const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
+new Chart(pieCtx, {
+    type: 'pie',
+    data: {
+        labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
+        datasets: [{
+            data: [56, 35, 25, 20],
+            backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
     }
-    100% {
-        background-position: 200px;
+});
+
+// VPN Line Chart
+const lineCtx = document.getElementById('vpnLineChart').getContext('2d');
+new Chart(lineCtx, {
+    type: 'line',
+    data: {
+        labels: ['2020', '2021', '2022', '2023', '2024'],
+        datasets: [{
+            label: 'VPN Market Growth',
+            data: [30, 35, 40, 44.6, 50],
+            backgroundColor: 'rgba(59, 130, 246, 0.2)',
+            borderColor: '#3B82F6',
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
     }
-}
-
-/* Step Description */
-.step-description {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.5s ease-in-out;
-}
-
-.step-description.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Dashboard Styles */
-.dashboard-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    align-items: start;
-}
-
-.chart-container {
-    background-color: var(--card-bg-light);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-body.dark-mode .chart-container {
-    background-color: var(--card-bg-dark);
-}
-
-.chart-container canvas {
-    max-width: 100%;
-    height: auto;
-}
-
-.stats-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.stat-card {
-    background-color: var(--card-bg-light);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-body.dark-mode .stat-card {
-    background-color: var(--card-bg-dark);
-}
-
-.stat-card h3 {
-    margin-bottom: 10px;
-    color: var(--accent-light);
-}
-
-body.dark-mode .stat-card 
+});
