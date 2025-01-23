@@ -22,27 +22,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <!-- Theme Switch -->
-            <label class="theme-switch">
-                <input type="checkbox" class="theme-switch__checkbox">
-                <div class="theme-switch__container">
-                    <div class="theme-switch__clouds"></div>
-                    <div class="theme-switch__stars-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831..." fill="currentColor"></path>
-                        </svg>
-                    </div>
-                    <div class="theme-switch__circle-container">
-                        <div class="theme-switch__sun-moon-container">
-                            <div class="theme-switch__moon">
-                                <div class="theme-switch__spot"></div>
-                                <div class="theme-switch__spot"></div>
-                                <div class="theme-switch__spot"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </label>
+            <button id="theme-toggle" class="btn-dark-mode">🌙 Dark Mode</button>
         </div>
     </header>
 
@@ -58,34 +38,36 @@
     <section id="how-it-works" class="section">
         <div class="container">
             <h2>How Does a VPN Work?</h2>
-            <div class="vpn-diagram">
-                <div class="diagram-node" id="device">
-                    <div class="icon">📱</div>
-                    <p>Your Device</p>
-                    <div class="step-description">1. Your device sends data.</div>
-                </div>
-                <div class="diagram-line">
-                    <div class="tunnel step-2">
-                        <p class="secure-label">Encrypted Tunnel</p>
-                    </div>
-                </div>
-                <div class="diagram-node" id="vpn-server">
-                    <div class="icon">🛡️</div>
-                    <p>VPN Server</p>
-                    <div class="tooltip">2. Data encrypted & sent to the server.</div>
-                </div>
-                <div class="diagram-line">
-                    <div class="tunnel step-3">
-                        <p class="secure-label">New IP Address</p>
-                    </div>
-                </div>
-                <div class="diagram-node" id="internet">
-                    <div class="icon">🌐</div>
-                    <p>Internet</p>
-                    <div class="step-description">3. Data travels securely online.</div>
-                </div>
+            <p>A VPN (Virtual Private Network) creates a secure and encrypted connection between your device and the internet. Here's how:</p>
+
+            <!-- Step 1: Device -->
+            <div class="vpn-step">
+                <div class="icon">📱</div>
+                <h3>Step 1: Your Device</h3>
+                <p>Your device (computer, phone, etc.) sends data.</p>
             </div>
-            <button id="start-animation" class="btn-primary">Start Animation</button>
+
+            <!-- Step 2: Encrypted Tunnel -->
+            <div class="vpn-step">
+                <div class="icon">🔒</div>
+                <h3>Step 2: Encrypted Tunnel</h3>
+                <p>Data passes through a secure, encrypted tunnel, making it unreadable to others.</p>
+                <div class="tunnel-animation"></div>
+            </div>
+
+            <!-- Step 3: VPN Server -->
+            <div class="vpn-step">
+                <div class="icon">🛡️</div>
+                <h3>Step 3: VPN Server</h3>
+                <p>The VPN server replaces your IP address with a new one, ensuring anonymity.</p>
+            </div>
+
+            <!-- Step 4: Internet -->
+            <div class="vpn-step">
+                <div class="icon">🌐</div>
+                <h3>Step 4: Internet</h3>
+                <p>Your data is sent securely to the internet with the new IP address.</p>
+            </div>
         </div>
     </section>
 
@@ -93,13 +75,20 @@
     <section id="dashboard" class="section">
         <div class="container">
             <h2>VPN Usage Dashboard</h2>
+            <p>A comprehensive view of VPN usage and market trends.</p>
+
             <div class="dashboard-grid">
-                <div class="chart-container">
+                <!-- Pie Chart -->
+                <div class="chart-container pie-chart">
                     <canvas id="vpnPieChart"></canvas>
                 </div>
-                <div class="chart-container">
+
+                <!-- Line Chart -->
+                <div class="chart-container line-chart">
                     <canvas id="vpnLineChart"></canvas>
                 </div>
+
+                <!-- Stats -->
                 <div class="stats-container">
                     <div class="stat-card">
                         <h3>Global Revenue</h3>
@@ -112,6 +101,10 @@
                     <div class="stat-card">
                         <h3>Market Growth</h3>
                         <p><strong>13.3%</strong> <span class="positive">+0.5%</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Security Breaches Avoided</h3>
+                        <p><strong>4.2M</strong> <span class="positive">+15%</span></p>
                     </div>
                 </div>
             </div>
@@ -126,6 +119,10 @@
                 <h3>What is a VPN?</h3>
                 <p>A VPN encrypts your internet connection to protect your privacy and data.</p>
             </div>
+            <div class="faq-item">
+                <h3>Is VPN legal?</h3>
+                <p>Yes, VPNs are legal in most countries. Check local laws to ensure compliance.</p>
+            </div>
         </div>
     </section>
 
@@ -137,6 +134,13 @@
             <p>Phone: +1 (800) 555-VPN</p>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 VPN Insights. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="scripts.js"></script>
 </body>
