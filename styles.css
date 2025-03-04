@@ -1,86 +1,60 @@
-/* Palette de couleurs */
+/* Palette de couleurs en mode clair par défaut */
 :root {
-  --bg-color: #0a0e23;        /* fond bleu nuit très sombre */
-  --primary-color: #00ffff;   /* cyan néon pour éléments forts */
-  --secondary-color: #3399ff; /* bleu vif pour accents secondaires */
-  --text-color: #e0eafc;      /* blanc légèrement bleuté pour le texte */
-  --font-tech: 'Orbitron', sans-serif;
+  --color-bg: #F0F4F8;
+  --color-text: #1A1A1A;
+  --color-primary: #2196F3;           /* Bleu d’accent */
+  --color-primary-glow: rgba(33,150,243, 0.5);
 }
 
-/* Style de base */
+/* Palette en mode sombre */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0B0E11;
+    --color-text: #E0E0E0;
+    --color-primary: #00FFFF;         /* Cyan néon */
+    --color-primary-glow: rgba(0,255,255, 0.7);
+  }
+}
+
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: var(--font-tech);
-  margin: 0;  /* enlever les marges par défaut */
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Titres avec effet néon */
-h1, h2, h3 {
-  color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-  margin: 0.5em 0;
-}
-
-/* Liens avec effet au survol */
-a {
-  color: var(--secondary-color);
-  text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-a:hover {
-  color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color);
-}
-
-/* Bouton futuriste */
+/* Bouton style néon futuriste */
 .button {
-  background: linear-gradient(45deg, #033, #055); /* fond dégradé discret */
-  border: 1px solid var(--secondary-color);
-  color: #fff;
-  padding: 10px 20px;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px var(--color-primary-glow);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .button:hover {
-  background: var(--secondary-color);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.6);
+  /* Halo plus intense et léger décollement au survol */
+  box-shadow: 0 0 12px var(--color-primary), 0 0 24px var(--color-primary);
+  transform: translateY(-2px);
+}
+.button:active {
+  /* Effet de "pression" du bouton */
+  transform: translateY(0);
+  box-shadow: 0 0 4px var(--color-primary);
 }
 
-/* Carte/panneau avec ombre subtile */
-.panel {
-  background: #111824;  /* quasi-noir avec une pointe de bleu */
-  border: 1px solid #333;
-  border-radius: 6px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1); /* ombre cyan très légère */
-  transition: transform 0.3s ease;
+/* Animation de pulse glow sur un élément (ex: icône active) */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-primary);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--color-primary);
+  }
 }
-.panel:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-}
-
-/* Animation de pulsation néon sur un élément clé */
-.highlight {
-  color: var(--primary-color);
-  text-shadow: 0 0 5px var(--primary-color);
-  animation: glowPulse 2s infinite alternate;
-}
-@keyframes glowPulse {
-  from { text-shadow: 0 0 5px var(--primary-color); }
-  to   { text-shadow: 0 0 15px var(--primary-color); }
-}
-
-/* Responsive design: ajustements pour mobile */
-@media (max-width: 600px) {
-  body { padding: 10px; }
-  .button { display: block; width: 100%; } /* boutons en bloc pleine largeur */
-  .panel { padding: 15px; }
-  h1 { font-size: 2em; }
+.glowing-icon {
+  animation: pulse-glow 2s infinite alternate;
 }
