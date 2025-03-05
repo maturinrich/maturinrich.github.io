@@ -4,26 +4,6 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-// VPN Pie Chart
-const pieCtx = document.getElementById('vpnPieChart').getContext('2d');
-new Chart(pieCtx, {
-    type: 'pie',
-    data: {
-        labels: ['Entertainment', 'Anonymity', 'Security', 'Business Use'],
-        datasets: [{
-            data: [56, 35, 25, 20],
-            backgroundColor: ['#3B82F6', '#63B3ED', '#48BB78', '#ECC94B']
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'bottom'
-            }
-        }
-    }
-});
 
 // VPN Line Chart
 const lineCtx = document.getElementById('vpnLineChart').getContext('2d');
